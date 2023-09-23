@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'java_info.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" >
+
+        <div class="container-fluid  text-white" id="color">
+          <a class="navbar-brand " href="http://127.0.0.1:8000/Home_page">CoWorld</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/list_of_courses">Explore</a>
+              </li>
+              
+              
+            </ul>
+            {% if username == "" %}
+        <form action="login_page" method="post">
+          {% csrf_token %}
+          <button class="btn btn-outline-primary text-white" style="margin-right:2rem; width:6rem" name="log_out" type="submit">Log in</button>
+        </form>
+        {% else %}
+        <form action="logout_page" method="post">
+          {% csrf_token %}
+          <button class="btn btn-outline-primary text-white" style="margin-right:2rem; width:6rem" name="log_out" type="submit">Log out</button>
+        </form>
+        {% endif %}
+          </div>
+        </div>
+      </nav>
+      <div id="content">
+    <h2><b>JAVA</b></h2>
+    <h5>
+    <p>Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.</p>
+    <p>It is a general-purpose programming language intended to let programmers write once, run anywhere (WORA) meaning that compiled Java code can run on all platforms that support Java without the need to recompile.</p>
+    <p> Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of the underlying computer architecture.</p> 
+    <p>The syntax of Java is similar to C and C++, but has fewer low-level facilities than either of them. </p>
+    <p>The Java runtime provides dynamic capabilities (such as reflection and runtime code modification) that are typically not available in traditional compiled languages.</p>
+    <p> As of 2019, Java was one of the most popular programming languages in use according to GitHub particularly for client–server web applications, with a reported 9 million developers.</p>
+    </h5>
+    <br>
+    <div class="card-group">
+        <div class="col">
+        <div class="card">
+    <h3><b>Features of Java programming</b></h3>
+    <h5>
+        <ul>
+            <li><p>Simple and Familiar</p></li>
+            <li><p>Object-Oriented</p></li>
+            <li><p>High Performance</p></li>
+            <li><p>Platform Independent</p></li>
+            <li><p>Portable</p></li>
+            <li><p>Secure</p></li>
+            <li><p>Robust</p></li>
+            <li><p>Architectural Neutral</p></li>
+            <li><p>Multi-threaded and Interactive</p></li>
+            <li><p>Dynamic and Extensible</p></li>
+
+        </ul>
+    </h5>
+    <br>
+</div>
+</div>
+
+<div class="col">
+    <div class="card">
+    <h3><b>Application of Java programming</b></h3>
+    <h5>
+        <ul>
+            <li><p>Mobile App Development</p></li>
+            <li><p>Desktop GUI Applications</p></li>
+            <li><p>Web-based Applications</p></li>
+            <li><p>Gaming Applications</p></li>
+            <li><p>Big Data Technologies</p></li>
+            <li><p>Distributed Applications</p></li>
+            <li><p>Artificial intelligence</p></li>
+            <li><p>Cloud applications</p></li>
+            <li><p>IoT Applications</p></li>
+            <li><p>Distributed Applications</p></li>
+
+        </ul>
+    </h5>
+    </div>
+</div>
+</div>
+<div class="d-flex justify-content-end">
+  {% if username == "admin" %}
+    <form action="all_enrolled_users" method="post">
+    {% csrf_token %}
+      <button class="btn btn-primary" style="width: 230px;" id="total_user" value="java" name="enroll_users">Total enrolled users</button>
+    </form>
+    <form action="all_completed_users" method="post">
+    {% csrf_token %}
+      <button class="btn btn-primary" style="width: 230px;" id="total_user" value="java" name="completed_users">Total completed users</button>
+    </form>
+    {% endif %}
+    {% if course == "101" %}
+    <form action="Introduction_of_java" method="post">
+      {% csrf_token %}
+    <button class="btn btn-primary" id="butto" name="sub">Continue</button>
+    </form>
+    {% else %}
+    <form action="enroll_in_course" method="post">
+      {% csrf_token %}
+    <button class="btn btn-primary" id="butto" value="101,java" name="sub">Enroll now</button> 
+    </form> 
+    {% endif %}
+</div>
+</div>
+</body>
+</html>

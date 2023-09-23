@@ -1,0 +1,212 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style_fmcq.css' %}">
+    <title>CoWorld</title>
+    </head>
+    <style>
+      #hei{
+        height: 1100px;
+      }
+    </style>
+  <body>
+
+
+    <!-- //navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" >
+
+      <div class="container-fluid  text-white" id="color">
+      <a class="navbar-brand " href="http://127.0.0.1:8000/Home_page">CoWorld</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            </li>
+            <li class="nav-item">
+            <a class="nav-link"` href="http://127.0.0.1:8000/list_of_courses">Explore</a>
+            </li>
+            
+            
+          </ul>
+          <form action="logout_page" method="post">
+            {% csrf_token %}
+            <button class="btn btn-outline-primary text-white" style="margin-right:2rem; width:6rem" name="log_out" type="submit">Log out</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+
+   
+      <div class="col" name="ex" id="c1">
+        <h4>List of all 30 MCQ</h4>
+        <li><a href="http://127.0.0.1:8000/FM1">MCQ-1</a></li>
+        <li><a href="http://127.0.0.1:8000/FM2">MCQ-2</a></li>
+        <li><a href="http://127.0.0.1:8000/FM3">MCQ-3</a></li>
+        <li><a href="http://127.0.0.1:8000/FM4">MCQ-4</a></li>
+        <li><a href="http://127.0.0.1:8000/FM5">MCQ-5</a></li>
+        <li><a href="http://127.0.0.1:8000/FM6">MCQ-6</a></li>
+        <li><a href="http://127.0.0.1:8000/FM7">MCQ-7</a></li>
+        <li><a href="http://127.0.0.1:8000/FM8">MCQ-8</a></li>
+        <li><a href="http://127.0.0.1:8000/FM9">MCQ-9</a></li>
+        <li><a href="http://127.0.0.1:8000/FM10">MCQ-10</a></li>
+        <li><a href="http://127.0.0.1:8000/FM11">MCQ-11</a></li>
+        <li style="color:rgb(119, 188, 252)"><a href="http://127.0.0.1:8000/FM12" style="color:rgb(119, 188, 252)">MCQ-12</a></li>
+        <li><a href="http://127.0.0.1:8000/FM13">MCQ-13</a></li>
+        <li><a href="http://127.0.0.1:8000/FM14">MCQ-14</a></li>
+        <li><a href="http://127.0.0.1:8000/FM15">MCQ-15</a></li>
+        <li><a href="http://127.0.0.1:8000/FM16">MCQ-16</a></li>
+        <li><a href="http://127.0.0.1:8000/FM17">MCQ-17</a></li>
+        <li><a href="http://127.0.0.1:8000/FM18">MCQ-18</a></li>
+        <li><a href="http://127.0.0.1:8000/FM19">MCQ-19</a></li>
+        <li><a href="http://127.0.0.1:8000/FM20">MCQ-20</a></li>
+        <li><a href="http://127.0.0.1:8000/FM21">MCQ-21</a></li>
+        <li><a href="http://127.0.0.1:8000/FM22">MCQ-22</a></li>
+        <li><a href="http://127.0.0.1:8000/FM23">MCQ-23</a></li>
+        <li><a href="http://127.0.0.1:8000/FM24">MCQ-24</a></li>
+        <li><a href="http://127.0.0.1:8000/FM25">MCQ-25</a></li>
+        <li><a href="http://127.0.0.1:8000/FM26">MCQ-26</a></li>
+        <li><a href="http://127.0.0.1:8000/FM27">MCQ-27</a></li>
+        <li><a href="http://127.0.0.1:8000/FM28">MCQ-28</a></li>
+        <li><a href="http://127.0.0.1:8000/FM29">MCQ-29</a></li>
+        <li><a href="http://127.0.0.1:8000/FM30">MCQ-30</a></li>
+        
+      </div>
+
+                        <div class="container-fluid" id="hei">
+        <div class="row">
+                    <div class="col-8 text-white m-4">
+                       <div id="qu">
+                        <pre>
+  Consider the following Java code fragment:
+
+  1   public class While
+  2   {
+  3      public void loop()
+  4       {
+  5       int x = 0;
+  6       while(1)
+  7         {
+  8         System.out.println("x plus one is" +(x+1));
+  9        }
+  10     }
+  11  }</pre></div>
+                        <body>
+                          <form action="check_value" method="post">
+                            {% csrf_token %}
+                            <label class="radio container col-10"> 
+                                <div class="row">
+                                    <div class="mx-5 my-4 mb-3 m-2" id="fr">
+                                            <input class="form-check-input" type="radio" name="ans" value="A">
+                                            &nbsp;&nbsp;A: There is a syntax error in line no. 6
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="radio container col-10"> 
+                                <div class="row">
+                                    <div class="mx-5 mb-3 m-2" id="fr">
+                                            <input class="form-check-input" type="radio" name="ans" value="B">
+                                            &nbsp;&nbsp;B: There is syntax error in line no. 1
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="radio container col-10"> 
+                                <div class="row">
+                                    <div class="mx-5 mb-3 m-2" id="fr">
+                                            <input class="form-check-input" type="radio" name="ans" value="C">
+                                            &nbsp;&nbsp;C: There is syntax errors in line nos. 1 & 6
+                                           
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="radio container col-10"> 
+                                <div class="row">
+                                    <div class="mx-5 mb-3 m-2" id="fr">
+                                        <input class="form-check-input" type="radio" name="ans" value="D">
+                                        &nbsp;&nbsp;D: There is a syntax error in line no. 8
+                                           
+                                    </div>
+                                </div>
+                            </label><br>
+                            <div class="container">
+                                <div class="btn-toolbar justify-content-between mx-3">
+                                    <button type="submit" id="b1" name="sub" value="A,12" class="btn btn-primary mx-5 my-3">Check</button>
+                            </form>       
+</body>
+</html>
+{% if ans == "1" %}
+
+    <html lang="en"> 
+      <body>
+        <form action="F1" method="post">  
+          <div class="mx-3">
+          <div class="mx-5">
+            {% csrf_token %}
+                        <button type="submit" value="13" name="sub2" id="b1" class="btn btn-primary my-3 mx-5">Next</button>
+                      </div>
+  </div>
+  </div>
+                    
+      </form>
+      <div1>
+      <div class="card col-10 border-success mx-5 my-3 mx-2" id="correct">
+  <div class="card-body text-success">
+    <h3 class="card-title">Correct</h3>
+    <p class="card-text">
+       Explanation:<br>
+      <div class="mx-3">
+      <label for="">
+        There is syntex error in line 6. Error:Type mismatch: cannot convert from int to boolean 
+  </div>
+</p>
+  </div>
+</div>
+      </div1>
+  {% endif %}
+  {% if ans == "0" %}
+  <form action="F1" method="post">  
+    <div class="mx-3">
+    <div class="mx-5">
+      {% csrf_token %}
+                  <button type="submit" value="13" name="sub2" id="b1" class="btn btn-primary my-3 mx-5">Next</button>
+                </div>
+</div>
+</div>
+              
+</form>
+<div class="card col-10 border-danger mx-5 my-3 mx-2" id="incorrect">
+  <div class="card-body text-danger">
+    <h3 class="card-title">Incorrect</h3>
+    <p class="card-text">
+      Explanation:<br>
+      <div class="mx-3">
+      <label for="">
+        There is syntex error in line 6. Error:Type mismatch: cannot convert from int to boolean 
+  </div>
+    </p>
+  </div>
+</div>
+{% endif %}
+{% if ans == "2" %}
+  <!DOCTYPE html>
+  <html lang="en">
+  <body>
+</div>
+<div class="card col-10 border-warning mx-5 my-3 mx-2" id="not_selected">
+    <h5><p class="card-text">YOU HAVE NOT SELECTED ANY OPTION</p></h5>
+  </div>
+    </body>
+  </html>
+  {% endif %}
+  </body>
+  </html>
+  
+
+

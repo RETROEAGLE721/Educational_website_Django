@@ -1,0 +1,644 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CoWorld</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">    <style>
+        #hei{
+
+            height: 5200px; 
+        }
+
+        
+        
+            #demo3{
+      position: relative;
+      color: white;
+      visibility: hidden;
+    }
+            #demo11{
+      position: relative;
+      color: white;
+      visibility: hidden;
+    }
+            #demo12{
+      position: relative;
+      color: white;
+      visibility: hidden;
+    }
+        #b1
+        {    
+          margin-top: 40px;
+             height: 340px;
+                
+        }
+        #b2
+           {
+             height: 240px;
+           }
+       #b3
+            {
+            margin-top: 40px;
+            height: 370px;
+
+            }
+        #b4
+            {
+            height: 270px;
+
+            }
+        #b5
+            {
+            margin-top: 40px;
+            height: 400px;
+
+            }
+        #b6
+            {
+            height: 300px;
+
+            }
+        #b7
+            {
+            margin-top: 40px;
+            height: 330px;
+
+            }
+        #b8
+            {
+            
+            height: 230px;
+
+            }
+        #b9
+            {
+            margin-top: 40px;
+        
+            height: 250px;
+
+            }
+        #b10
+            {
+            
+            height: 160px;
+
+            }
+        #b11
+            {
+            margin-top: 40px;
+            height: 230px;
+
+            }
+        #b12
+            {
+            height: 140px;
+
+            }
+        #b13
+            {
+            margin-top: 40px;
+            height: 280px;
+
+            }
+        #b14
+            {
+            height: 190px;
+
+            }
+        #b15
+            {
+            margin-top: 40px;
+            height: 230px;
+
+            }
+        #b16
+            {
+            height: 140px;
+
+            }
+
+                           
+    </style>
+  </head>
+  <body onclick="events()">
+
+    <nav class="navbar navbar-expand-lg navbar-dark" >
+
+      <div class="container-fluid  text-white" id="color">
+      <a class="navbar-brand " href="http://127.0.0.1:8000/Home_page">CoWorld</a>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/Home_page">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/list_of_courses">Explore</a>
+            </li>
+            
+            
+          </ul>
+          <form action="logout_page" method="post">
+            {% csrf_token %}
+            <button class="btn btn-outline-primary text-white" style="margin-right:2rem; width:6rem" name="log_out" type="submit">Log out</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+   
+            
+                        <!--col-1-->
+                        <div class="col-2 " id="c1">
+                          <h4>JAVA</h4>
+                          <li><a href="http://127.0.0.1:8000/Introduction_of_java">Introducation Of Java</a></li>
+                            <li><a href="http://127.0.0.1:8000/Operator">Operators</a></li>
+                            <li> <a href="http://127.0.0.1:8000/Scanner">Scanner</a></li>
+                            <li><a href="http://127.0.0.1:8000/Typecasting">Type Casting</a></li>
+                            <li> <a href="http://127.0.0.1:8000/Ifelse">if else</a></li>
+                            <li style="color:rgb(119, 188, 252)"><a href="http://127.0.0.1:8000/loop" style="color:rgb(119, 188, 252)">Loops</a></li>
+                            <li> <a href="http://127.0.0.1:8000/Switch">Switch</a></li>
+                            <li><a href="http://127.0.0.1:8000/Class_Constructor">Class & Constructor</a></li>
+                            <li><a href="http://127.0.0.1:8000/This_Keyword">This Keyword</a></li>  
+                            <li><a href="http://127.0.0.1:8000/Object">Object</a></li>
+                            <li><a href="http://127.0.0.1:8000/Anonymous_object">Anonymous Object</a></li>
+                            <li><a href="http://127.0.0.1:8000/Method">Method</a></li>
+                            <li><a href="http://127.0.0.1:8000/Access_Modifiers">Access Modifiers</a></li>
+                            <li><a href="http://127.0.0.1:8000/FinalClass1">FinalClass</a></li>
+                            <li><a href="http://127.0.0.1:8000/Final_Variable">Final Variable</a></li>
+                            <li><a href="http://127.0.0.1:8000/Final_method">Final Method</a></li>                        
+                            <li><a href="http://127.0.0.1:8000/Method_overriding">Method Overriding</a></li>
+                            <li><a href="http://127.0.0.1:8000/Inheritance">Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Single_Inheritance">Single Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Muiltilevel_Inheritance">Muiltilevel Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Muiltiple_hybrid_Inheritance">Muiltiple hybrid Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Hierarchical_inheritance">Hierarchical Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/SuperKeyword">Super Keyword</a></li>  
+                            <li><a href="http://127.0.0.1:8000/Abstract_class_and_method">Abstract Class And Method</a></li>
+                            <li><a href="http://127.0.0.1:8000/interface">interface</a></li>
+                            <li><a href="http://127.0.0.1:8000/exception_handling">Exception handling</a></li>
+                            <li><a href="http://127.0.0.1:8000/try_catch_block">Try catch</a></li>
+                            <li><a href="http://127.0.0.1:8000/finally_block">Finally block</a></li>
+                        </div>
+                        <div class="container-fluid" id="hei">
+        <div class="row">
+                        <!--col-2-->
+                        <div class="col-8 text-white">
+                        <!---->
+                        <h2>Loops </h2>
+                        <p>Java supports such looping features which enable us to develop concise programs  containing repetitive processes without using unconditional branching statements like goto statement.</p>
+
+                            <p>In looping, a sequence of statements are executed until some condition for the termination of the loop are satisfied.A <i>program loop</i> therefore consists of two segments ,one known  as the <i>body of the loop</i> and the other known as the control statement.The <i>control statement</i> tests certain conditions and then directs the repeated execution of the statements contained in the body of the loop
+
+                            <div id="demo1">
+                            <p>The Java language provides four loop operations. They are:<br>
+
+                                <ol>
+                                    <li>while loop</li>
+                                    <li>do while loop</li>
+                                    <li>for loop</li>
+                                    <li>foreach loop</li>
+                                </ol>
+                                <br>
+                                </div>
+                                <div id="demo2">
+                                <h3>1.while loop :</h3>
+                                The meaning of this while-loop is “as long as CONDITION has the value of true, execute STATEMENTS ''. The diagram in Fig. 11.1 shows how a while-loop works. The for-loop and while loop can simulate each other.
+                                <br><br>
+
+    <pre>
+        while( CONDITION)
+        {
+            STATEMENTS;
+        }
+    </pre>
+    </div>
+
+                        
+                          
+                        <div class="card" id="b1">
+                          <h5 class="card-header">Example:-</h5>
+                          <div class="card-body">
+                               
+                        <div class="card" id="b2">
+                      
+                          <div class="card-body" >
+<pre>
+    public class WhileExample{
+      public static void main(String[] args){
+        int i=1;
+        while(i<=10){
+          System.out.println(i);
+          i++;
+        }
+      }
+    }
+</pre>
+                          </div>
+                        </div>
+                          </div>
+                        </div>
+                      
+                            <div class="card" id="b3">
+                          <h5 class="card-header">Output:</h5>
+                          <div class="card-body">
+                               
+                        <div class="card" id="b4">
+                      
+                          <div class="card-body" >
+<pre>
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+</pre>
+                          </div>
+                          </div>
+                          </div>
+                          </div>
+                          <br>
+                          <div id="demo3">
+                          <h3>2.do while loop:</h3>
+                          <p>The do-while loop is a variant of while-loops, where the execution of the loop-body precedes the termination condition evaluation.The do while loop will execute itself minimum once because do while check condition at the end of loop.The structure of a do-while loop is: <p>
+                           
+    <pre>
+        do{
+            STATEMENTS
+        }while(CONDITION);
+    </pre>
+    </div>
+          <div id="demo4">
+    The semicolon that appears is necessary. We can rewrite a do-while loop using a while-loop.<br><br>
+    </div>
+    <div id="demo5">
+    <h3>3.for loop:</h3>
+    <br>
+    <pre>
+        for ( INITIALIZATION; CONTINUATION CONDITION; UPDATE ) 
+        {
+        STATEMENTS;
+         } 
+    </pre>
+    </div> 
+    <div id="demo6">
+    <h3>Three Rules Of For Loop:</h3>
+      
+        <ul>
+        <li>The initialization of a for-loop is a statement that is executed prior to entering the repetition. </li>
+        <li>The continuation condition is one that must hold for the loop-body to execute. Before executing the loop-body, this condition is tested. If the condition does not hold, the loop is terminated immediately.</li>
+        <li>The update is a statement that is executed after each execution of the loop-body.</li>
+        </ul>
+        </div>
+<div class="card" id="b5">
+    <h5 class="card-header">Example:-</h5>
+    <div class="card-body">
+         
+  <div class="card" id="b6">
+
+    <div class="card-body" >
+<pre>
+    public class ForExample 
+    { 
+      public static void main( String[] args ) 
+      { 
+        int count; 
+        for ( count = 0; count < 8; count ++ ) 
+        { 
+          System.out.println(count ); 
+        } 
+      } 
+    }
+</pre>
+     
+      </div>
+      </div>
+      </div>
+      </div>
+
+
+<div class="card" id="b7">
+    <h5 class="card-header">Output:</h5>
+    <div class="card-body">
+         
+  <div class="card" id="b8">
+
+    <div class="card-body" >
+    
+<pre>
+    0
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+</pre><br><br><br><br>
+
+
+</div>
+</div>
+</div>
+</div>
+<br>
+<div id="demo7">
+<p>Since the conditional test is always  performed at the beginning of the loop,the body of the loop may not be executed at all,if the condition fails at the start.</p>
+</div>
+    <div class="card" id="b9">
+      <h5 class="card-header">Syntax:-</h5>
+      <div class="card-body">
+           
+    <div class="card" id="b10">
+  
+      <div class="card-body" >
+<pre>
+    for(x=9 ; x<=8 ; x--)
+    {
+    .........
+    .........
+    }
+</pre>
+
+    </div>
+       </div>
+    </div>
+       </div>
+        <br>
+        <div id="demo8">
+        <P>will never be executed because the test condition fails at the very beginning itself.</P>
+        </div>
+        <div id="demo9">
+        <h2>4.foreach:</h2><br>
+        <ul>
+            <li>It starts with the keyword for like a normal for-loop.</li>
+            <li>For-loop can only be used for traversing an array.</li>
+            <li>Instead of declaring and initializing a loop counter variable, you declare a variable that is the same type as the base type of the array, followed by a colon, which is then followed by the array name.</li>
+            <li>In the loop body, you can use the loop variable you created rather than using an indexed array element.</li>
+            </ul>
+            </div>
+
+<div class="card" id="b11">
+  <h5 class="card-header">Syntax:-</h5>
+  <div class="card-body">
+       
+<div class="card" id="b12">
+
+  <div class="card-body" >
+<pre>
+    for (type var : array) 
+    { 
+      statements using var;
+    }
+</pre>
+
+</div>
+   </div>
+</div>
+   </div>
+
+
+<div class="card" id="b13">
+    <h5 class="card-header">Example:-</h5>
+    <div class="card-body">
+         
+  <div class="card" id="b14">
+
+    <div class="card-body" >
+
+<pre>
+    int numbers[4] ={4,7,3,1} ;
+    // for each loop
+    for (int num : numbers) 
+        {
+            System.out.print(num+” ”);
+        }
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div class="card" id="b15">
+    <h5 class="card-header">Output:</h5>
+    <div class="card-body">
+         
+  <div class="card" id="b16">
+
+    <div class="card-body" >
+<pre>
+    4
+    7
+    3
+    1
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<br>
+<div id="demo10">
+<h3>Limitations of for-each loop:</h3>
+<br>
+<ol>
+<li>For-each loops are not appropriate when you want to modify the array.</li>
+<li>For-each loops do not keep track of index. So we can not obtain array index using For-Each loop.</li>
+<li>For-each only iterates forward over the array in single steps.</li>
+<li>For-each cannot process two decision making statements at once.</li>
+<li>For-each also has some performance overhead over simple iteration.</li>
+</ol>
+<br>
+</div>
+<div id="demo11">
+<h3>Breaking of loops:</h3>
+<br>
+<p>We can either break the loops by making condition fales or by using break or continue keywords.</p>
+</div>
+<div id="demo12">
+<p>The keyword “break” instructs the program to terminate the execution of the loop immediately, ignoring the remaining part of the present round and all the remaining rounds</p>
+
+<p>The keyword “continue” instructs the program to skip the remainder of the loop-body and move on to the next round of the loop.</p>
+      </div>
+
+
+      <form action="PT" method="post">
+        {% csrf_token %}
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end" id="sub1">
+<button class="btn btn-primary my-2" name="sub1" value="for_loop" id="sub" type="submit">Next</button>
+</div>
+</form>
+                        </div>
+
+                        <!--Col-3-->
+                            <div class="col-2 text-white">
+
+                            </div>
+
+
+
+                    </div>                
+                </div>
+                <script>
+                    let x=0;
+        function events() { 
+            x += 1;
+            switch (x) {
+                case 1:
+                    {
+                    document.getElementById("demo1").style.visibility="visible";
+                    document.getElementById("demo1").style.animation="ani 1s 1";
+                    break;
+                    }
+                case 2:
+                    {
+                    document.getElementById("demo2").style.visibility="visible";
+                    document.getElementById("demo2").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 3:
+                      {
+                        document.getElementById("b1").style.visibility="visible";
+                        document.getElementById("b2").style.visibility="visible";
+                        document.getElementById("b1").style.animation="ani 1s 1";
+                        document.getElementById("b2").style.animation="ani 1s 1";
+                        break;
+                      }
+                    case 4:
+                    {
+                      document.getElementById("b3").style.visibility="visible";
+                      document.getElementById("b4").style.visibility="visible";
+                    document.getElementById("b3").style.animation="ani 1s 1";
+                    document.getElementById("b4").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 5:
+                        {
+                        document.getElementById("demo3").style.visibility="visible";
+                        document.getElementById("demo3").style.animation="ani 1s 1";
+                        break;
+                        }
+                    case 6:
+                        {
+                        document.getElementById("demo4").style.visibility="visible";
+                        document.getElementById("demo4").style.animation="ani 1s 1";
+                        break;
+                        }
+                    case 7:
+                        {
+                        document.getElementById("demo5").style.visibility="visible";
+                        document.getElementById("demo5").style.animation="ani 1s 1";
+                        break;
+                        }
+                    case 8:
+                        {
+                        document.getElementById("demo6").style.visibility="visible";
+                        document.getElementById("demo6").style.animation="ani 1s 1";
+                        break;
+                        }
+                        case 9:
+                          {
+                            document.getElementById("b5").style.visibility="visible";
+                            document.getElementById("b6").style.visibility="visible";
+                            document.getElementById("b5").style.animation="ani 1s 1";
+                            document.getElementById("b6").style.animation="ani 1s 1";
+                            break;
+                          }
+                    case 10:
+                    {
+                      document.getElementById("b7").style.visibility="visible";
+                      document.getElementById("b8").style.visibility="visible";
+                      document.getElementById("b7").style.animation="ani 1s 1";
+                      document.getElementById("b8").style.animation="ani 1s 1";
+                      break;
+                    }
+                    case 11:
+                    {
+                      document.getElementById("demo7").style.visibility="visible";
+                      document.getElementById("demo7").style.animation="ani 1s 1";
+                      break;
+                    }
+                    case 12:
+                      {
+                        document.getElementById("b9").style.visibility="visible";
+                        document.getElementById("b10").style.visibility="visible";
+                        document.getElementById("b9").style.animation="ani 1s 1";
+                        document.getElementById("b10").style.animation="ani 1s 1";
+                        break;
+                      }
+                      case 13:
+                      {
+                        document.getElementById("demo8").style.visibility="visible";
+                        document.getElementById("demo8").style.animation="ani 1s 1";
+                        break;
+                      }
+                      case 14:
+                      {
+                        document.getElementById("demo9").style.visibility="visible";
+                        document.getElementById("demo9").style.animation="ani 1s 1";
+                        break;
+                      }
+                      case 15:
+                        {
+                          document.getElementById("b11").style.visibility="visible";
+                          document.getElementById("b12").style.visibility="visible";
+                          document.getElementById("b11").style.animation="ani 1s 1";
+                          document.getElementById("b12").style.animation="ani 1s 1";
+                          break;
+                        }
+                        case 16:
+                          {
+                            document.getElementById("b13").style.visibility="visible";
+                            document.getElementById("b14").style.visibility="visible";
+                            document.getElementById("b13").style.animation="ani 1s 1";
+                            document.getElementById("b14").style.animation="ani 1s 1";
+                            break;
+                          }
+                          case 17:
+                            {
+                              document.getElementById("b15").style.visibility="visible";
+                              document.getElementById("b16").style.visibility="visible";
+                              document.getElementById("b15").style.animation="ani 1s 1";
+                              document.getElementById("b16").style.animation="ani 1s 1";
+                              break;
+                            }
+                            case 18:
+                            {
+                              document.getElementById("demo10").style.visibility="visible";
+                              document.getElementById("demo10").style.animation="ani 1s 1";
+                              break;
+                            }
+                            case 19:
+                            {
+                              document.getElementById("demo11").style.visibility="visible";
+                              document.getElementById("demo11").style.animation="ani 1s 1";
+                              break;
+                            }
+                            case 20:
+                            {
+                              document.getElementById("demo12").style.visibility="visible";
+                              document.getElementById("demo12").style.animation="ani 1s 1";
+                              break;
+                            }
+                            case 21:
+                    {
+                    document.getElementById("sub1").style.visibility="visible";
+                    document.getElementById("sub1").style.animation="ani 1s 1";
+                    break;
+                    }
+                  }
+                }
+                  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

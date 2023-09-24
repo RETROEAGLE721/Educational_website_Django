@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login_style.css' %}">
+</head>
+<body>
+    <div id="log"><b>Login Details</b></div>
+    <div class="card">
+        <div class="card-body">
+<form action="login_user" method="post">
+{% csrf_token %}
+  <div class="mb-3 my-4">
+    <label class="form-label">Email</label>
+    <input type="text" class="form-control" id="username" name="username" require>
+  </div>
+  <div class="my-4">
+    <label class="form-label">Password</label>
+    <input type="password" class="form-control" id="passwor" name="pwd" require>
+    <h6><a href="#">Forgot Password?</a></h6>
+  </div>
+  <h6 style="text-align: center;color: red">{{ data }}</h6>
+  <h6 style="text-align: center;">New user?<a href="http://127.0.0.1:8000/new_user">Create New Account</a></h4>
+  <div class="d-grid gap-2">
+    <button class="btn btn-primary my-3" type="submit" name="login">Login</button>
+  </div>
+</form>
+  <div id="or">OR</div>
+  <div id="social">
+  <button class="loginBtn loginBtn--facebook">
+    Facebook
+  </button>
+  
+  <button class="loginBtn loginBtn--google">
+    Google
+  </button>
+</div>
+
+
+
+    </div>
+</div>
+</body>
+</html>
+<?php
+
+if (isset($_POST['login'])) {
+  
+      
+$username=$_POST['username'];
+$pwd=$_POST['pwd'];
+if ($username == "admin@gmail.com" && $pwd == "0987") {
+    $_SESSION['username']="admin";
+    $_SESSION['email']="admin@gmail.com";
+    $_SESSION['id7']="999";
+    header('Location:http://localhost/php/project_home_page/Home_page.php');
+}
+else{
+$con=mysqli_connect("localhost","root","","total_users_of_website");
+
+$q1 = "SELECT * from user_details_of_website where email='$username'";
+
+$re=mysqli_query($con,$q1);
+
+while($row=mysqli_fetch_array($re)){
+
+  $id = $row['id'];
+  $username1=$row['username'];
+  $username2=$row['email'];
+  $pwd1=$row['paassword'];
+
+}
+
+if ($username==$username2 && $pwd==$pwd1) {
+  $_SESSION['id7']=$id;
+  $_SESSION['username']=$username1;
+  $_SESSION['email']=$username2;
+  header('Location:http://localhost/php/project_home_page/Home_page.php');
+}
+else{
+  ?>
+  <?php
+}
+} 
+}
+
+
+?>

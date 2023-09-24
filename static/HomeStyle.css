@@ -1,0 +1,199 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.banner{
+    width: 100%;
+    height: 100rem;
+    background-size: cover;
+    background-position: center;
+}
+body{
+    height: 2000px;
+    overflow-y:scroll ; 
+    overflow-x: hidden;
+    background-color: #000213;
+}
+.navbar{
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #0066ff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+
+}
+.navbar ul li:hover::after{
+    width: 100%;
+
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    margin-top: 52rem;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+#space{
+    margin-bottom: 15rem;
+}
+#b1 button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #0066ff;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+#b2{
+   margin-right: 4rem;
+}
+#tx{
+    text-align: left;
+}
+#content1{
+
+    text-align: left;
+    margin-left: 80px;
+    font-size: 20px;
+    margin-bottom: 3rem;
+}
+#cr1,#cr2{
+    margin-bottom: 7rem;
+}
+
+.card{
+
+    background: none;
+    width: 28rem;
+    height: 31rem;
+    border-color: #3700ff;
+    border-style: solid;
+    border-width: thick;
+    margin-left: 170px;
+    padding-left: 18px;
+    text-align: left;
+    border-radius: 13px;
+}
+.card-title{
+    font-size: 34px;
+}
+.card p{
+    font-size: 28px;
+}
+.card li{
+    font-size: 20px;
+}
+#b3,#b4,#b5,#b6,#b7,#b8{
+    position: relative;
+    visibility: hidden;
+}
+
+#b1 span{
+    background: #0066ff;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index:-1;
+    transition: 0.5s;
+}
+#b1 button:hover span{
+    width: 100%;
+
+}
+#b1 button:hover{
+    border: none;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: none; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #0046af; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #237bfffb; 
+  }
+
+  
+  div::-webkit-scrollbar-track {
+    background: none; 
+  }
+   
+  div::-webkit-scrollbar-thumb {
+    background: none; 
+  }
+  
+  div::-webkit-scrollbar-thumb:hover {
+    background: none; 
+  }
+#c1{
+    position: relative;
+}
+  @keyframes bmin {
+
+    from{top:30px;}
+    to{top:0px;}
+
+}
+  @keyframes bmout {
+
+    from{top:0px}
+    to{top:30px;}
+
+}
+
+         

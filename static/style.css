@@ -1,0 +1,347 @@
+#color{
+    background: black;
+    color: white;
+    position: fixed;
+      margin-top: 45px;
+      z-index: 999;
+      border-top : 6px solid #00183b;
+      border-bottom : 6px solid #00183b ;
+      height : 5rem;
+}
+#c1
+{
+    background-color: #00183b;
+    color: white;
+    position : fixed;
+      overflow-y : scroll;
+      margin-left: 25px;
+      height : 680px;
+      margin-top: 55px;
+      padding-bottom:10px;
+}
+#hei{
+    background: #000213;
+    height: 2200px; 
+    color: white;
+    padding-left:25px;
+    padding-top:20px;
+    overflow-x : none;
+    margin-left: 290px;
+    margin-top: 55px;
+    width : auto;
+}
+::-webkit-scrollbar {
+  display : none;
+}
+p{
+  position: relative;
+}
+a{
+  color: white;
+  text-decoration: none;
+  font-size: large;
+}
+
+#t1 {
+  font-family: 'Times New Roman', Times, serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#t1 td, #t1 th ,#t1 tr{
+  border: 1px solid #ff0000;
+  padding: 8px;
+}
+
+#t1 td, #t1 th ,#t1 tbody {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #00183b;
+  color: white;
+}
+
+
+
+a:hover
+        {
+          /* color: #0D6EFD; */
+          color: rgb(119, 188, 252);
+          text-underline-position: under;
+        }
+body{
+     background-color: #00183b;
+      color: white;
+      font-family: 'Times New Roman', Times, serif;
+        font-size: large;
+    }
+
+    #sub{
+        width:6rem;
+      }
+
+#b1
+{
+  margin-top: 40px;
+  background-color: #00183b;
+     height: 280px;
+      position: relative;
+      visibility: hidden;
+      color: white;
+}
+#b2
+   {
+     background-color: black;
+     height: 170px;
+     position: relative;
+     visibility: hidden;
+     color: white;
+   }
+
+#b3
+   {  
+    margin-top: 40px;
+    background-color: #00183b;
+     height: 600px;
+     position: relative;
+        visibility: hidden;
+        color: white;
+   }
+#b4
+   {
+     background-color: black;
+     height: 500px;
+     position: relative;
+     visibility: hidden;
+     color: white;
+   }
+#b5
+    {
+    margin-top: 40px;
+    background-color: #00183b;
+    height: 200px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b6
+    {
+    background-color: black;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b7
+    {
+      margin-top: 40px;
+    background-color: #00183b;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b8
+    {
+    background-color: black;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b9
+    {
+      margin-top: 40px;
+    background-color: #00183b;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b10
+    {
+    background-color: black;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b11
+    {
+      margin-top: 40px;
+    background-color: #00183b;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b12
+    {
+    background-color: black;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b13
+    {
+      margin-top: 40px;
+    background-color: #00183b;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b14
+    {
+    background-color: black;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b15
+    {
+      margin-top: 40px;
+    background-color: #00183b;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b16
+    {
+    background-color: black;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b17
+    {
+      margin-top: 40px;
+    background-color: #00183b;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b18
+    {
+    background-color: black;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b19
+    {
+      margin-top: 40px;
+    background-color: #00183b;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b20
+    {
+    background-color: black;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b21
+    {
+      margin-top: 40px;
+    background-color: #00183b;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b22
+    {
+    background-color: black;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b23
+    {
+      margin-top: 40px;
+    background-color: #00183b;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+#b24
+    {
+    background-color: black;
+    height: 100px;
+    position: relative;
+      visibility: hidden;
+      color: white;
+    }
+
+    #t1{
+      
+        /* visibility: hidden; */
+        height:100px ;
+        width: 1000px;
+        position: relative;
+        
+      }
+
+    #sub1{
+      margin-top:40px;
+      position: relative;
+      visibility:hidden;
+    }
+    #sub
+    {
+      width: 6rem;
+      margin-right:2rem;
+    }
+    #demo{
+      color: white;
+      position: relative;
+    }
+
+    #demo1,#demo2,#demo4,#demo5,#demo6,#demo7,#demo8,#demo9,#demo10,#demo11,#demo12,#demo13,#demo14
+    {
+      visibility : hidden;
+      position: relative;
+      color: white;
+    }
+    #demo3{
+      position: relative;
+      color: white;
+      visibility: hidden;
+    }
+        
+
+    #fr{
+
+        border: solid 1px;
+        display: inline-block;
+        width: 10px;
+        height: 50px;
+        padding: 10px;
+        padding-left: 15px;
+        background-color: #001046;
+        color: white;
+        border-radius: 10px;
+        
+    }
+
+@keyframes ani {
+
+    from{color:#000213; top:30px}
+    to{top:0px}
+
+}
+
+           

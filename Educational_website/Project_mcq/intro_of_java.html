@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style_mcq.css' %}">  
+    <title>CoWorld</title>
+    </head>
+    <style>
+      #hei{
+        height: 740px;
+      }
+    </style>
+  <body>
+
+    <!-- //navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" >
+
+      <div class="container-fluid  text-white" id="color">
+      <a class="navbar-brand " href="http://127.0.0.1:8000/Home_page">CoWorld</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            </li>
+            <li class="nav-item">
+            <a class="nav-link"` href="http://127.0.0.1:8000/Home_page">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link"` href="http://127.0.0.1:8000/list_of_courses">Explore</a>
+            </li>
+            
+            
+          </ul>
+          <form action="logout_page" method="post">
+            {% csrf_token %}
+            <button class="btn btn-outline-primary text-white" style="margin-right:2rem; width:6rem" name="log_out" type="submit">Log out</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+   
+                        <div class="col-2 " id="c1">
+                          <h4>JAVA</h4>
+                          <li style="color:rgb(119, 188, 252)"><a href="http://127.0.0.1:8000/Introduction_of_java" style="color:rgb(119, 188, 252)">Introducation Of Java</a></li>
+                            <li><a href="http://127.0.0.1:8000/Operator">Operators</a></li>
+                            <li> <a href="http://127.0.0.1:8000/Scanner">Scanner</a></li>
+                            <li><a href="http://127.0.0.1:8000/Typecasting">Type Casting</a></li>
+                            <li> <a href="http://127.0.0.1:8000/Ifelse">if else</a></li>
+                            <li><a href="http://127.0.0.1:8000/loop">Loops</a></li>
+                            <li> <a href="http://127.0.0.1:8000/Switch">Switch</a></li>
+                            <li><a href="http://127.0.0.1:8000/Class_Constructor">Class & Constructor</a></li>
+                            <li><a href="http://127.0.0.1:8000/This_Keyword">This Keyword</a></li>  
+                            <li><a href="http://127.0.0.1:8000/Object">Object</a></li>
+                            <li><a href="http://127.0.0.1:8000/Anonymous_object">Anonymous Object</a></li>
+                            <li><a href="http://127.0.0.1:8000/Method">Method</a></li>
+                            <li><a href="http://127.0.0.1:8000/Access_Modifiers">Access Modifiers</a></li>
+                            <li><a href="http://127.0.0.1:8000/FinalClass1">FinalClass</a></li>
+                            <li><a href="http://127.0.0.1:8000/Final_Variable">Final Variable</a></li>
+                            <li><a href="http://127.0.0.1:8000/Final_method">Final Method</a></li>                        
+                            <li><a href="http://127.0.0.1:8000/Method_overriding">Method Overriding</a></li>
+                            <li><a href="http://127.0.0.1:8000/Inheritance">Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Single_Inheritance">Single Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Muiltilevel_Inheritance">Muiltilevel Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Muiltiple_hybrid_Inheritance">Muiltiple hybrid Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Hierarchical_inheritance">Hierarchical Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/SuperKeyword">Super Keyword</a></li>  
+                            <li><a href="http://127.0.0.1:8000/Abstract_class_and_method">Abstract Class And Method</a></li>
+                            <li><a href="http://127.0.0.1:8000/interface">interface</a></li>
+                            <li><a href="http://127.0.0.1:8000/exception_handling">Exception handling</a></li>
+                            <li><a href="http://127.0.0.1:8000/try_catch_block">Try catch</a></li>
+                            <li><a href="http://127.0.0.1:8000/finally_block">Finally block</a></li>
+                        </div>
+
+                        <div class="container-fluid" id="hei">
+        <div class="row">
+                    <div class="col-8 text-white m-4">
+                       <div id="qu">
+                       Which statement is true about Java?
+                        </div>
+                        <body>
+                          <form action="check_value" method="post">
+                            {% csrf_token %}
+                            <label class="radio container col-10"> 
+                                <div class="row">
+                                    <div class="mx-5 my-4 mb-3 m-2" id="fr">
+                                            <input class="form-check-input" type="radio" name="ans" value="A">
+                                            &nbsp;&nbsp;A: Java is a platform-independent programming language
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="radio container col-10"> 
+                                <div class="row">
+                                    <div class="mx-5 mb-3 m-2" id="fr">
+                                            <input class="form-check-input" type="radio" name="ans" value="B">
+                                            &nbsp;&nbsp;B: Java is a code dependent programming language
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="radio container col-10"> 
+                                <div class="row">
+                                    <div class="mx-5 mb-3 m-2" id="fr">
+                                            <input class="form-check-input" type="radio" name="ans" value="C">
+                                            &nbsp;&nbsp;C:  Java is a sequence-dependent programming language
+                                           
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="radio container col-10"> 
+                                <div class="row">
+                                    <div class="mx-5 mb-3 m-2" id="fr">
+                                        <input class="form-check-input" type="radio" name="ans" value="D">
+                                        &nbsp;&nbsp;D: Java is a platform-dependent programming language
+                                           
+                                    </div>
+                                </div>
+                            </label><br>
+                            <div class="container">
+                                <div class="btn-toolbar justify-content-between mx-3">
+                                    <button type="submit" id="b1" value="A,intro_of_java" name="sub" class="btn btn-primary mx-5 my-3">Check</button>
+                            </form>       
+</body>
+</html>
+
+{% if ans == "1" %}
+
+    <html lang="en"> 
+      <body>
+        <form action="F1" method="post">  
+          <div class="mx-3">
+          <div class="mx-5">
+            {% csrf_token %}
+                        <button type="submit" value="Operator" name="sub2" id="b1" class="btn btn-primary my-3 mx-5">Next</button>
+                      </div>
+  </div>
+  </div>
+                    
+      </form>
+      <div1>
+      <div class="card col-10 border-success mx-5 my-3 mx-2" id="correct">
+  <div class="card-body text-success">
+    <h3 class="card-title">Correct</h3>
+    <p class="card-text">
+       Explanation:<br>
+      <div class="mx-3">
+      <label for="">
+        Java is called ‘Platform Independent Language’ as it primarily works on the principle of ‘compile once, run everywhere’.
+  </div>
+</p>
+  </div>
+</div>
+      </div1>
+  {% endif %}
+  {% if ans == "0" %}
+  <form action="F1" method="post">  
+    <div class="mx-3">
+    <div class="mx-5">
+      {% csrf_token %}
+                  <button type="submit" value="Operator" name="sub2" id="b1" class="btn btn-primary my-3 mx-5">Next</button>
+                </div>
+</div>
+</div>
+              
+</form>
+<div class="card col-10 border-danger mx-5 my-3 mx-2" id="incorrect">
+  <div class="card-body text-danger">
+    <h3 class="card-title">Incorrect</h3>
+    <p class="card-text">
+      Explanation:<br>
+      <div class="mx-3">
+      <label for="">
+        Java is called ‘Platform Independent Language’ as it primarily works on the principle of ‘compile once, run everywhere’.
+  </div>
+    </p>
+  </div>
+</div>
+{% endif %}
+{% if ans == "2" %}
+  <!DOCTYPE html>
+  <html lang="en">
+  <body>
+</div>
+<div class="card col-10 border-warning mx-5 my-3 mx-2" id="not_selected">
+    <h5><p class="card-text">YOU HAVE NOT SELECTED ANY OPTION</p></h5>
+  </div>
+    </body>
+  </html>
+  {% endif %}
+  </body>
+  </html>
+  
+

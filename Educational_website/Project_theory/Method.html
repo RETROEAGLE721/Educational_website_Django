@@ -1,0 +1,356 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CoWorld</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">   <style>
+        #demo3
+        {
+      visibility : hidden;
+      position: relative;
+      color: white;
+    }
+    #hei
+    {
+      height:2700px;
+    }
+        #b1
+        {
+             
+             height: 360px;
+                
+        }
+        #b2
+           {
+             height: 250px;
+           }
+         #b3
+            {
+            
+            height: 160px;
+
+            }
+        #b4
+            {
+            height: 60px;
+
+            }
+
+          #b5
+          {
+            
+            height: 470px;
+          }
+
+          #b6{
+            height: 370px;
+          }
+          #b7
+          {
+            margin-top:45px;
+            height: 170px;
+          }
+
+          #b8{
+            height: 60px;
+          }
+
+                           
+    </style>
+  </head>
+  <body onclick="events()">
+
+    <nav class="navbar navbar-expand-lg navbar-dark" >
+
+      <div class="container-fluid  text-white" id="color">
+      <a class="navbar-brand " href="http://127.0.0.1:8000/Home_page">CoWorld</a>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/Home_page">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/list_of_courses">Explore</a>
+            </li>
+            
+            
+          </ul>
+          <form action="logout_page" method="post">
+            {% csrf_token %}
+            <button class="btn btn-outline-primary text-white" style="margin-right:2rem; width:6rem" name="log_out" type="submit">Log out</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  
+            
+                        <!--col-1-->
+                        <div class="col-2 " id="c1">
+                          <h4>JAVA</h4>
+                          <li><a href="http://127.0.0.1:8000/Introduction_of_java">Introducation Of Java</a></li>
+                            <li><a href="http://127.0.0.1:8000/Operator">Operators</a></li>
+                            <li> <a href="http://127.0.0.1:8000/Scanner">Scanner</a></li>
+                            <li><a href="http://127.0.0.1:8000/Typecasting">Type Casting</a></li>
+                            <li> <a href="http://127.0.0.1:8000/Ifelse">if else</a></li>
+                            <li><a href="http://127.0.0.1:8000/loop">Loops</a></li>
+                            <li> <a href="http://127.0.0.1:8000/Switch">Switch</a></li>
+                            <li><a href="http://127.0.0.1:8000/Class_Constructor">Class & Constructor</a></li>
+                            <li><a href="http://127.0.0.1:8000/This_Keyword">This Keyword</a></li>  
+                            <li><a href="http://127.0.0.1:8000/Object">Object</a></li>
+                            <li><a href="http://127.0.0.1:8000/Anonymous_object">Anonymous Object</a></li>
+                            <li style="color:rgb(119, 188, 252)"><a href="http://127.0.0.1:8000/Method" style="color:rgb(119, 188, 252)">Method</a></li>
+                            <li><a href="http://127.0.0.1:8000/Access_Modifiers">Access Modifiers</a></li>
+                            <li><a href="http://127.0.0.1:8000/FinalClass1">FinalClass</a></li>
+                            <li><a href="http://127.0.0.1:8000/Final_Variable">Final Variable</a></li>
+                            <li><a href="http://127.0.0.1:8000/Final_method">Final Method</a></li>                        
+                            <li><a href="http://127.0.0.1:8000/Method_overriding">Method Overriding</a></li>
+                            <li><a href="http://127.0.0.1:8000/Inheritance">Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Single_Inheritance">Single Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Muiltilevel_Inheritance">Muiltilevel Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Muiltiple_hybrid_Inheritance">Muiltiple hybrid Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Hierarchical_inheritance">Hierarchical Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/SuperKeyword">Super Keyword</a></li>  
+                            <li><a href="http://127.0.0.1:8000/Abstract_class_and_method">Abstract Class And Method</a></li>
+                            <li><a href="http://127.0.0.1:8000/interface">interface</a></li>
+                            <li><a href="http://127.0.0.1:8000/exception_handling">Exception handling</a></li>
+                            <li><a href="http://127.0.0.1:8000/try_catch_block">Try catch</a></li>
+                            <li><a href="http://127.0.0.1:8000/finally_block">Finally block</a></li>
+                        </div>
+                        <div class="container-fluid" id="hei">
+        <div class="row">
+                        <!--col-2-->
+                        <div class="col-8 text-white">
+                        <!---->
+                        <h3>Method </h3>
+                        <p>A method is a block of code that performs a specific task.</p>
+
+                       <p>A method that divides a complex problem into smaller chunks makes your program easy to understand and reusable.</p>
+                                                
+                       <p>A method is a block of code which only runs when it is called.</p>
+                        <div id="demo1">
+                       <p>Return Type: Return type is a data type that the method returns. It may have a primitive data type, object, collection, void, etc. If the method does not return anything, we use the void keyword.</p>
+
+                       <p>Method Name: It is a name that is used to define the name of a method.</p>
+
+                       <p>Parameter List: It is the list of parameters separated by a comma and enclosed in the pair of parentheses. It contains the data type and variable name. If the method has no parameter, leave the parentheses blank.</p>
+
+                       <p>Method Body: It is a part of the method declaration. It contains all the actions to be performed. It is enclosed within the pair of curly braces.</p>
+                       <pre>
+                         public class Main {
+                           public void myMethod(int a) {
+                             // code to be executed
+                            }
+                          }
+                        </pre>
+                      </div>
+          <div id="demo2">
+      <h3>There are two types of methods in Java:</h3>
+
+      <ul>
+        <li>Predefined Method</li>
+        <li>User-defined Method</li>
+      </ul>
+<br>
+</div>
+      <div id="demo3">
+      <h3>1.Predefined Method:</h3>
+
+      <P>The method that is already defined in the Java class libraries is known as predefined methods. It is also known as the standard library method or built-in method. We can directly use these methods just by calling them in the program at any point. Some predefined methods are length(), equals(), compareTo(), sqrt(), etc.</P>
+      <br>
+      </div>
+                        <div class="card" id="b1">
+                          <h5 class="card-header">Example:-</h5>
+                          <div class="card-body">
+                               
+                        <div class="card" id="b2">
+                      
+                          <div class="card-body" >
+<pre>
+  public class LengthExample
+    {  
+      public static void main(String args[])
+    {
+
+    String s1="ABCD";  
+    System.out.println("string length is: "+s1.length()); 
+    }
+  }  
+</pre>
+                          </div>
+                        </div>
+                          </div>
+                        </div>
+                
+                            <div class="card" id="b3">
+                          <h5 class="card-header">Output:</h5>
+                          <div class="card-body">
+                               
+                        <div class="card" id="b4">
+                      
+                          <div class="card-body" >
+<pre>
+4
+</pre>
+                          </div>
+                          </div>
+                          </div>
+                          </div>
+                          <br>
+                          <div id="demo4">
+                          <h3>2.User-defined Method:</h3>
+                          <br>
+
+
+<p>
+The method written by the user or programmer is known as a user-defined method. These methods are modified according to the requirement.
+</p>
+
+</div>
+<div class="card" id="b5">
+  <h5 class="card-header">Example:</h5>
+  <div class="card-body">
+       
+<div class="card" id="b6">
+
+  <div class="card-body" >
+
+    <pre>
+    class add{
+      public int addNumbers(int a, int b) {
+      int sum = a + b;
+      return sum;
+    }
+
+    Class Main{
+      public static void main(String[] args) { 
+        int num1 = 25,num2 = 15;
+        add obj = new add();
+        int result = obj.addNumbers(num1, num2);
+        System.out.println("Sum is: " + result);
+      }
+    }
+</pre>
+   </div>
+   </div>
+   </div>
+   </div>
+
+
+
+    <div class="card" id="b7">
+      <h5 class="card-header">Output:</h5>
+      <div class="card-body">
+           
+    <div class="card" id="b8">
+  
+      <div class="card-body" >
+<pre>
+    Sum is: 40
+</pre>
+
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        <form action="PT" method="post">
+                          {% csrf_token %}
+                          <div class="d-grid gap-2 d-md-flex justify-content-md-end" id="sub1">
+  <button class="btn btn-primary my-2" name="sub1" value="method_" id="sub" type="submit">Next</button>
+</div>
+</form>
+                        <!--Col-3-->
+                            <div class="col-2 text-white">
+
+                            </div>
+
+                               
+
+                    </div>  
+                              
+                </div>
+                <script>
+                    let x=0;
+        function events() { 
+            x += 1;
+            switch (x) {
+                case 0:
+                    {
+                    break;
+                    }
+                case 1:
+                    {
+                    document.getElementById("demo1").style.visibility="visible";
+                    document.getElementById("demo1").style.animation="ani 1s 1";
+                    break;
+                    }
+                case 2:
+                    {
+                    document.getElementById("demo2").style.visibility="visible";
+                    document.getElementById("demo2").style.animation="ani 1s 1";
+                    break;
+                    }
+                case 3:
+                    {
+                    document.getElementById("demo3").style.visibility="visible";
+                    document.getElementById("demo3").style.animation="ani 1s 1";
+                    break;
+                    }
+                case 4:
+                    {
+                    document.getElementById("b1").style.visibility="visible";
+                    document.getElementById("b2").style.visibility="visible";
+                    document.getElementById("b1").style.animation="ani 1s 1";
+                    document.getElementById("b2").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 5:
+                    {
+                      document.getElementById("b3").style.visibility="visible";
+                      document.getElementById("b4").style.visibility="visible";
+                    document.getElementById("b3").style.animation="ani 1s 1";
+                    document.getElementById("b4").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 6:
+                    {
+                    document.getElementById("demo4").style.visibility="visible";
+                    document.getElementById("demo4").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 7:
+                    {
+                      document.getElementById("b5").style.visibility="visible";
+                      document.getElementById("b6").style.visibility="visible";
+                    document.getElementById("b5").style.animation="ani 1s 1";
+                    document.getElementById("b6").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 8:
+                    {
+                      document.getElementById("b7").style.visibility="visible";
+                      document.getElementById("b8").style.visibility="visible";
+                    document.getElementById("b7").style.animation="ani 1s 1";
+                    document.getElementById("b8").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 9:
+                    {
+                    document.getElementById("sub1").style.visibility="visible";
+                    document.getElementById("sub1").style.animation="ani 1s 1";
+                    break;
+                    }
+                  }
+                }
+                  </script>
+                
+   
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

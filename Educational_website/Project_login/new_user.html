@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'login_style.css' %}">
+</head>
+<style>
+    .card{
+        height: 620px;
+    }
+    #or{
+        margin-top: 0px;
+    }
+    #social{
+        margin-top: 12px;
+    }
+    #ol{
+        margin-top: 100px;
+    }
+    
+</style>
+<body>
+    <div id="log"><b>Registration Details</b></div>
+    <div class="card">
+        <div class="card-body">
+<form action="create_user" method="post">
+    {% csrf_token %}
+  <div class="my-2">
+    <label class="form-label">Username</label>
+    <input type="text" onkeyup="validpasswod()"class="form-control" id="username" name="username" required>
+  </div>
+  <div class="my-3">
+    <label class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email" required>
+  </div>
+  <div class="my-3">
+    <label class="form-label">Password</label>
+    <input type="password" onkeyup="validpasswod()" class="form-control" id="pwd1" name="pwd" required>
+  </div>
+  <p id="demo"></p>
+  <ul>
+    <li id="con1">Username and Password should not be same</li>
+    <li id="con2">Password must be between 8 to 16 character</li>
+    <li id="con3">Password must contain Number</li>
+    <li id="con4">Password must contain Upper case</li>
+  </ul>
+  <h6 style="text-align: center; color: red;">{{ data }}</h6>
+  <div class="d-grid gap-2">
+      <button class="btn btn-primary mx-2 my-3" name="sub" id="ol" type="submit" disabled>Login</button>
+
+    </div>
+</form>
+  
+  <div id="or">OR</div>
+  <div id="social">
+  <button class="loginBtn loginBtn--facebook">
+    Facebook
+  </button>
+  
+  <button class="loginBtn loginBtn--google">
+    Google
+  </button>
+</div>
+
+    </div>
+</div>
+<script>
+
+    function validpasswod(){    
+        pwd=document.getElementById("pwd1").value;
+    username = document.getElementById("username").value;
+
+    if(pwd==""){
+        document.getElementById("con1").style.color=="white"
+        document.getElementById("con2").style.color=="white"
+        document.getElementById("con3").style.color=="white"
+        document.getElementById("con4").style.color=="white"
+    }
+
+    if (document.getElementById("con1").style.color=="green" &&
+                document.getElementById("con2").style.color=="green" &&
+                document.getElementById("con3").style.color=="green" &&
+                document.getElementById("con4").style.color=="green") {
+                    document.getElementById("ol").disabled=false;
+                }
+                else{
+        document.getElementById("ol").disabled=true;
+
+    }
+
+            if(pwd == username){
+                document.getElementById("con1").style.color="white";
+            }
+            else{
+                document.getElementById("con1").style.color="green";
+            }
+
+            if(pwd.length >= 7){
+                document.getElementById("con2").style.color="green";
+            }
+            else{
+                document.getElementById("con2").style.color="white";
+            }
+            
+            if(pwd.length >= 15){
+                document.getElementById("con2").style.color="white";
+            }
+
+            re=/[0-9]/g;
+            if(re.test(pwd)){
+                document.getElementById("con3").style.color="green";
+            }
+            else{
+                document.getElementById("con3").style.color="white";
+            }
+
+            re=/[A-Z]/g;
+            if(re.test(pwd)){
+                document.getElementById("con4").style.color="green";
+            }
+            else{
+                document.getElementById("con4").style.color="white";
+            }
+            
+    }
+</script>   
+
+
+</body>
+</html>

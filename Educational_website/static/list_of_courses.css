@@ -1,0 +1,89 @@
+body{
+    height: 1400px;
+    overflow-y:scroll ; 
+    overflow-x: hidden;
+    background-color: #000213;
+    font-family: 'Times New Roman', Times, serif;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+#color{
+    background: black;
+    color: white;
+    position: static;
+    margin-top: 45px;
+    border-bottom : 6px solid #00183b ;
+    height : 4rem;
+    width: 95rem;
+    margin: 0px;
+}
+#card1,#card3{
+    margin-left: 50px;
+}
+#card2,#card4{
+    margin-right: 100px;
+}
+#b3,#b4,#b5,#b6,#b7,#b8{
+    position: relative;
+    visibility: hidden;
+}
+.col{
+    margin-left: 40px;
+}
+.card{
+    color: white;
+    background: none;
+    width: 26rem;
+    height: 31rem;
+    border-color: #0066ff;
+    border-style: solid;
+    border-width: thick;
+    padding-left: 18px;
+    text-align: left;
+    border-radius: 13px;
+    margin-top: 50px ;   
+}
+.card-title{
+    font-size: 34px;
+}
+.card p{
+    font-size: 28px;
+}
+.card li{
+    font-size: 20px;
+}
+#heading{
+    color: white;
+    margin-left: 90px;
+    margin-top: 50px;
+}
+@keyframes bmin {
+
+    from{top:30px;}
+    to{top:0px;}
+
+}
+  @keyframes bmout {
+
+    from{top:0px}
+    to{top:30px;}
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: none; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #0046af; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #237bfffb; 
+  }

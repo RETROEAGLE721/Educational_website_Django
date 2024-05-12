@@ -1,0 +1,34 @@
+$_SESSION['colname']="Abstract_Class_And_Method";
+    $_SESSION['cpath']=" /../php/project_theory/interface.php";
+      header('Location: http://localhost/php/project_databases/progess_update.php');
+
+http://localhost/php/project_databases/progess_update.php
+$_SESSION['cpath'] = "";
+Introducation_Of_Java    
+    Operators    
+    Scanner    
+    Type_Casting    
+    if_else    
+    Loops    
+    Switch    
+    Class_and_Constructor    
+    This_Keyword    
+    Object_    
+    Anonymous_Object    
+    Method    
+    Access_Modifiers    
+    FinalClass    
+    Final_Variable    
+    Final_Method    
+    Method_Overriding    
+    Inheritance    
+    Single_Inheritance    
+    Muiltilevel_Inheritance    
+    Muiltiple_hybrid_Inheritance    
+    Hierarchical_Inheritance    
+    Super_Keyword    
+    Abstract_Class_And_Method    
+    Interface    
+    Exception_handling    
+    try_catch    
+    finally_Block  

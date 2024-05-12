@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'list_of_courses.css' %}">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" >
+
+    <div class="container-fluid  text-white" id="color">
+      <a class="navbar-brand " href="http://127.0.0.1:8000/Home_page">CoWorld</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/Home_page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/list_of_courses">Explore</a>
+          </li>
+          
+          
+        </ul>
+        {% if username == "" %}
+        <form action="login_page" method="post">
+          {% csrf_token %}
+          <button class="btn btn-outline-primary text-white" style="margin-right:2rem; width:6rem" name="log_out" type="submit">Log in</button>
+        </form>
+        {% else %}
+        <form action="logout_page" method="post">
+          {% csrf_token %}
+          <button class="btn btn-outline-primary text-white" style="margin-right:2rem; width:6rem" name="log_out" type="submit">Log out</button>
+        </form>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+
+  <h1 id="heading">List Of Topics :</h1>
+    <div class="card-group">
+        <div class="col">
+        <div id="card1">
+          <div class="card" onmouseenter="bmin('b3')" onmouseleave="bmout('b3')">
+      <div class="card-body">
+        <h5 class="card-title">Artificial Intelligence</h5>
+        <p>
+          Application :-
+          <ul>
+            <li>Virtual reality</li>
+            <li>Natural language processing</li>
+            <li>Artificial creativity</li>
+            <li>Game artificial intelligence </li>
+            <li>Face recognition</li>
+            <li>Speech recognition</li>
+            <li>Image processing</li>
+            <li>Photo and video manipulation</li>
+            <li>Automation</li>
+          </ul>
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end" id="b3">
+        <button onclick="pagereplace()" class="btn btn-primary mx-3">View details</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+        
+      <div class="col">
+          <div class="card" onmouseenter="bmin('b4')" onmouseleave="bmout('b4')">
+      <div class="card-body">
+        <h5 class="card-title">Blockchain</h5>
+        <p>
+          Application :-
+          <ul>
+            <li>Asset Management</li>
+            <li>Cross-Border Payments</li>
+            <li>Healthcare</li>
+            <li>Cryptocurrency</li>
+            <li>Online Identity Verification</li>
+            <li>Internet of Things</li>
+            <li>Copyright and Royalties</li>
+            <li>Financial services</li>
+            <li> Insurance Industry</li>
+          </ul>
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end" id="b4">
+          <button onclick="pagereplace()" class="btn btn-primary mx-3">View details</button>
+        </div>
+      </div>
+    </div>
+        </div>
+
+      <div class="col">
+        <div id="card2">
+        <div class="card" onmouseenter="bmin('b5')" onmouseleave="bmout('b5')">
+      <div class="card-body">
+        <h5 class="card-title">Python</h5>
+        <p>
+          Application :-
+          <ul>
+            <li>Web Development</li>
+            <li>Data Science and Data Visualization</li>
+            <li>AI and ML</li>
+            <li>Enterprise Applications</li>
+            <li>Game Development</li>
+            <li>Software Development</li>
+            <li>Operating Systems</li>
+            <li>Desktop GUI</li>
+            <li>Embedded Applications</li>
+          </ul>
+        </p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end" id="b5">
+          <button onclick="pagereplace()" class="btn btn-primary mx-3">View details</button>
+        </div>
+        </div>
+      </div>
+          </div>
+        </div> 
+      </div>
+      <div class="card-group">
+              <div class="col">
+                <div id="card3">
+                <div class="card" onmouseenter="bmin('b6')" onmouseleave="bmout('b6')">
+                  <div class="card-body">
+                    <h5 class="card-title">JAVA</h5>
+                    <p>
+                      Application :-
+                      <ul>
+                        <li>Mobile Applications</li>
+                        <li>Desktop GUI Applications</li>
+                        <li>Web-based Applications</li>
+                        <li>Distributed Applications</li>
+                        <li>Cloud-based Applications</li>
+                        <li>Big Data technologies</li>
+                        <li>Scientific Applications</li>
+                        <li>Gaming Applications</li>
+                        <li>Enterprise Applications</li>
+                      </ul>
+                    </p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end" id="b6">
+                      <form action="java_info_page" method="post">
+                        {% csrf_token %}
+                      <button name="java_submit" value="101" type="submit" class="btn btn-primary mx-3">View details</button>
+                        </form>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            <div class="col">
+              <div class="card" onmouseenter="bmin('b7')" onmouseleave="bmout('b7')" id="c1">
+                <div class="card-body">
+                  <h5 class="card-title">HTML & CSS</h5>
+                  <p>
+                    Application :-
+                    <ul>
+                      <li>Web Development</li>
+                      <li>Building Web pages</li>
+                      <li>Web Applications</li>
+                      <li>Enterprise Applications</li>
+                      <li>Client-side storage</li>
+                      <li>Website Maintenance</li>
+                      <li>Easy Accessibility</li>
+                      <li>Dynamic Website Templates</li>
+                      <li>Flash Animation and Effects</li>
+                    </ul>
+                  </p>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-end" id="b7">
+                    <button onclick="pagereplace()" class="btn btn-primary mx-3">View details</button>
+                  </div>
+                  </div>
+                </div>
+              </div>
+              
+            <div class="col">
+              <div id="card4">
+              <div class="card" onmouseenter="bmin('b8')" onmouseleave="bmout('b8')" id="c1">
+                <div class="card-body">
+                  <h5 class="card-title">C++</h5>
+                  <p>
+                    Application :-
+                    <ul>
+                      <li>Operating Systems</li>
+                      <li>Games</li>
+                      <li>AI and ML</li>
+                      <li>Cloud/Distributed Systems</li>
+                      <li>Embedded Systems</li>
+                      <li>Advanced Computation</li>
+                      <li>O Web Browsers</li>
+                      <li>GUI Based Applications/li>
+                      <li>Compilers</li>
+                    </ul>
+                  </p>
+                  <div class="d-grid gap-2 d-md-flex justify-content-md-end" id="b8">
+                    <button onclick="pagereplace()" class="btn btn-primary mx-3">View details</button>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script>
+            function cardFuntion(id){
+                    console.log(id);
+            }
+        
+            function bmin(id){
+                document.getElementById(id).style.visibility="visible";
+                document.getElementById(id).style.animation="bmin 0.3s 1";
+            
+              }
+        
+            function bmout(id){
+              
+              document.getElementById(id).style.animation="bmout 0.3s 1";
+              setTimeout(() => {
+                document.getElementById(id).style.visibility="hidden";
+              },200);
+            
+            }
+            function pagereplace(){
+              window.location="http://127.0.0.1:8000/other_program";
+            }
+            
+        </script>
+</body>
+</html>

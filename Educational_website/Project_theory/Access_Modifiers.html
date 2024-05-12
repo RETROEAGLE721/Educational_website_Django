@@ -1,0 +1,213 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"> 
+    <title>CoWorld</title>
+  </head>
+  <style>
+    #hei{
+      height: 1000px;
+    }
+    #demo3{
+  visibility : hidden;
+      position: relative;
+      color: white;
+}
+  </style>
+  <body onclick="events()">
+
+<!-- //navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark" >
+
+  <div class="container-fluid  text-white" id="color">
+  <a class="navbar-brand " href="http://127.0.0.1:8000/Home_page">CoWorld</a>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:8000/Home_page">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:8000/list_of_courses">Explore</a>
+        </li>
+        
+        
+      </ul>
+      <form action="logout_page" method="post">
+        {% csrf_token %}
+        <button class="btn btn-outline-primary text-white" style="margin-right:2rem; width:6rem" name="log_out" type="submit">Log out</button>
+      </form>
+    </div>
+  </div>
+</nav>
+        
+                    <!--col-1-->
+                    <div class="col-2" id="c1">
+                      <h4>JAVA</h4>
+                      <li><a href="http://127.0.0.1:8000/Introduction_of_java">Introducation Of Java</a></li>
+                        <li><a href="http://127.0.0.1:8000/Operator">Operators</a></li>
+                        <li> <a href="http://127.0.0.1:8000/Scanner">Scanner</a></li>
+                        <li><a href="http://127.0.0.1:8000/Typecasting">Type Casting</a></li>
+                        <li> <a href="http://127.0.0.1:8000/Ifelse">if else</a></li>
+                        <li><a href="http://127.0.0.1:8000/loop">Loops</a></li>
+                        <li> <a href="http://127.0.0.1:8000/Switch">Switch</a></li>
+                        <li><a href="http://127.0.0.1:8000/Class_Constructor">Class & Constructor</a></li>
+                        <li><a href="http://127.0.0.1:8000/This_Keyword">This Keyword</a></li>  
+                        <li><a href="http://127.0.0.1:8000/Object">Object</a></li>
+                        <li><a href="http://127.0.0.1:8000/Anonymous_object">Anonymous Object</a></li>
+                        <li><a href="http://127.0.0.1:8000/Method">Method</a></li>
+                        <li style="color:rgb(119, 188, 252)"><a href="http://127.0.0.1:8000/Access_Modifiers" style="color:rgb(119, 188, 252)">Access Modifiers</a></li>
+                        <li><a href="http://127.0.0.1:8000/FinalClass1">FinalClass</a></li>
+                        <li><a href="http://127.0.0.1:8000/Final_Variable">Final Variable</a></li>
+                        <li><a href="http://127.0.0.1:8000/Final_method">Final Method</a></li>                        
+                        <li><a href="http://127.0.0.1:8000/Method_overriding">Method Overriding</a></li>
+                        <li><a href="http://127.0.0.1:8000/Inheritance">Inheritance</a></li>
+                        <li><a href="http://127.0.0.1:8000/Single_Inheritance">Single Inheritance</a></li>
+                        <li><a href="http://127.0.0.1:8000/Muiltilevel_Inheritance">Muiltilevel Inheritance</a></li>
+                        <li><a href="http://127.0.0.1:8000/Muiltiple_hybrid_Inheritance">Muiltiple hybrid Inheritance</a></li>
+                        <li><a href="http://127.0.0.1:8000/Hierarchical_inheritance">Hierarchical Inheritance</a></li>
+                        <li><a href="http://127.0.0.1:8000/SuperKeyword">Super Keyword</a></li>  
+                        <li><a href="http://127.0.0.1:8000/Abstract_class_and_method">Abstract Class And Method</a></li>
+                        <li><a href="http://127.0.0.1:8000/interface">interface</a></li>
+                        <li><a href="http://127.0.0.1:8000/exception_handling">Exception handling</a></li>
+                        <li><a href="http://127.0.0.1:8000/try_catch_block">Try catch</a></li>
+                        <li><a href="http://127.0.0.1:8000/finally_block">Finally block</a></li>
+                    </div>
+                    <div class="container-fluid" id="hei">
+    <div class="row">
+                    <!--col-2-->
+                    <div class="col-8 text-white">
+                    <!---->
+                    <h2>Access Modifiers </h2>
+                    <p>The access modifiers in Java specify the accessibility or scope of a field, method, constructor, or class. We can change the access level of fields, constructors, methods, and class by applying the access modifier on it.</p>
+                    
+                    <div id="demo1">
+                    <p>There are four types of Java access modifiers:</p>
+                    <ul>
+                        <li>Private: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.</li>
+                      
+                        <li>Default: The access level of a default modifier is only within the package. It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
+                        </li>
+                      
+                        <li>Protected: The access level of a protected modifier is within the package and outside the package through child class. If you do not make the child class, it cannot be accessed from outside the package.</li>
+                      
+
+                        <li>Public: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
+                        </li>
+                    </ul>
+                    <br>
+                    </div>
+
+
+                      <div id="demo2">
+                    <table class="px-3" id="t1">
+                      <thead>
+                        <tr>
+                          <th scope="col">Access Modifier</th>
+                          <th scope="col">Within class</th>
+                          <th scope="col">Within package</th>
+                          <th scope="col">outside package by subclass only</th>
+                          <th scope="col">outside package</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">Private</th>
+                          <td>Yes</td>
+                          <td>No</td>
+                          <td>No</td>
+                          <td>No</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Default</th>
+                          <td>Yes</td>
+                          <td>Yes</td>
+                          <td>No</td>
+                          <td>No</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">Protected</th>
+                          <td>Yes</td>
+                          <td>Yes</td>
+                          <td>Yes</td>
+                          <td>No</td>
+
+                        </tr>
+                        <tr>
+                          <th scope="row">Public</th>
+                          <td>Yes</td>
+                          <td>Yes</td>
+                          <td>Yes</td>
+                          <td>Yes</td>
+                          
+                  
+                        </tr> 
+                       
+                      </tbody>
+                    </table>
+                    </div>
+                  </h4>
+                  <form action="PT" method="post">
+                    {% csrf_token %}
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end" id="sub1">
+<button class="btn btn-primary my-2" name="sub1" value="access_modifier" id="sub" type="submit">Next</button>
+</div>
+</form>
+                      </div>
+                    </div>
+                    
+                        </div>
+                        
+                      </div>
+                    </div>
+
+                    <!--Col-3-->
+                        <div class="col-2 text-white">
+
+                        </div>
+
+
+
+                </div>                
+            </div>
+                   
+
+                <script>
+                  let x=0;
+        function events() { 
+            x += 1;
+            switch (x) {
+              
+                case 1:
+                    {
+                    document.getElementById("demo1").style.visibility="visible";
+                    document.getElementById("demo1").style.animation="ani 1s 1";
+                    break;
+                    }
+                case 2:
+                    {
+                    document.getElementById("t1").style.visibility="visible";
+                    document.getElementById("t1").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 3:
+                    {
+                    document.getElementById("sub1").style.visibility="visible";
+                    document.getElementById("sub1").style.animation="ani 1s 1";
+                    break;
+                    }
+                  }
+                }
+                </script>
+                
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <title>CoWorld</title>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">    <style>
+
+        #hei{
+          height: 1700px;
+        }
+        #t1{
+          height:120px ;
+          width: 1000px;
+        }
+
+        #b1
+        {
+
+             height: 410px;
+                
+        }
+        #b2
+           {
+
+             height: 300px;
+           }
+         #b3
+            {
+
+            height: 160px;
+
+            }
+        #b4
+            {
+            height: 60px;
+
+            }
+
+                           
+    </style>
+  </head>
+  <body onclick="events()" onload="scrollToBottom()">
+
+    <!-- //navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" >
+
+      <div class="container-fluid  text-white" id="color">
+      <a class="navbar-brand " href="http://127.0.0.1:8000/Home_page">CoWorld</a>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/Home_page">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/list_of_courses">Explore</a>
+            </li>
+            
+            
+          </ul>
+          <form action="logout_page" method="post">
+            {% csrf_token %}
+            <button class="btn btn-outline-primary text-white" style="margin-right:2rem; width:6rem" name="log_out" type="submit">Log out</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+
+  
+            
+                        <!--col-1-->
+                        <div class="col-2 " id="c1">
+                          <h4>JAVA</h4>
+                          <li><a href="http://127.0.0.1:8000/Introduction_of_java">Introducation Of Java</a></li>
+                            <li><a href="http://127.0.0.1:8000/Operator">Operators</a></li>
+                            <li> <a href="http://127.0.0.1:8000/Scanner">Scanner</a></li>
+                            <li><a href="http://127.0.0.1:8000/Typecasting">Type Casting</a></li>
+                            <li> <a href="http://127.0.0.1:8000/Ifelse">if else</a></li>
+                            <li><a href="http://127.0.0.1:8000/loop">Loops</a></li>
+                            <li> <a href="http://127.0.0.1:8000/Switch">Switch</a></li>
+                            <li><a href="http://127.0.0.1:8000/Class_Constructor">Class & Constructor</a></li>
+                            <li><a href="http://127.0.0.1:8000/This_Keyword">This Keyword</a></li>  
+                            <li><a href="http://127.0.0.1:8000/Object">Object</a></li>
+                            <li><a href="http://127.0.0.1:8000/Anonymous_object">Anonymous Object</a></li>
+                            <li><a href="http://127.0.0.1:8000/Method">Method</a></li>
+                            <li><a href="http://127.0.0.1:8000/Access_Modifiers">Access Modifiers</a></li>
+                            <li><a href="http://127.0.0.1:8000/FinalClass1">FinalClass</a></li>
+                            <li><a href="http://127.0.0.1:8000/Final_Variable">Final Variable</a></li>
+                            <li><a href="http://127.0.0.1:8000/Final_method">Final Method</a></li>                        
+                            <li><a href="http://127.0.0.1:8000/Method_overriding">Method Overriding</a></li>
+                            <li><a href="http://127.0.0.1:8000/Inheritance">Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Single_Inheritance">Single Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Muiltilevel_Inheritance">Muiltilevel Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Muiltiple_hybrid_Inheritance">Muiltiple hybrid Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Hierarchical_inheritance">Hierarchical Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/SuperKeyword">Super Keyword</a></li>  
+                            <li><a href="http://127.0.0.1:8000/Abstract_class_and_method">Abstract Class And Method</a></li>
+                            <li><a href="http://127.0.0.1:8000/interface">interface</a></li>
+                            <li style="color:rgb(119, 188, 252)"><a href="http://127.0.0.1:8000/exception_handling" style="color:rgb(119, 188, 252)">Exception handling</a></li>
+                            <li><a href="http://127.0.0.1:8000/try_catch_block">Try catch</a></li>
+                            <li><a href="http://127.0.0.1:8000/finally_block">Finally block</a></li>
+                        </div>
+                        <div class="container-fluid" id="hei">
+        <div class="row">
+                        <!--col-2-->
+                        <div class="col-8 text-white">
+                        <!---->
+                        <h2>Exception Handling:</h2>
+                        <p>The Exception Handling in Java is one of the powerful mechanism to handle the runtime errors so that the normal flow of the application can be maintained.</p>
+                        <div id="demo1">
+                        <p>
+                        In Java, an exception is an event that disrupts the normal flow of the program. It is an object which is thrown at runtime.
+                        </p>
+                        </div>
+                        <div id="demo2">
+                        <p>
+                            <b>Exception</b> is an unwanted or unexpected event, which occurs during the execution of a program, i.e. at run time, that disrupts the normal flow of the program’s instructions. Exceptions can be caught and handled by the program.
+                            </p>
+                            </div>
+                            <div id="demo3">
+<p><b>Errors</b> represent irrecoverable conditions such as Java virtual machine (JVM) running out of memory, memory leaks, stack overflow errors, library incompatibility, infinite recursion, etc. Errors are usually beyond the control of the programmer, and we should not try to handle errors.</p>
+</div>
+<div id="demo4">
+<p>Let us discuss the most important part which is the differences between Error and Exception that is as follows:</p> 
+
+<b>Error:</b> An Error indicates a serious problem that a reasonable application should not try to catch.
+<b>Exception:</b> Exception indicates conditions that a reasonable application might try to catch.
+</div>
+
+<br>
+<div id="demo5">
+<h4>Types of Java Exceptions:</h4>
+
+<p>There are mainly two types of exceptions: checked and unchecked. An error is considered as the unchecked exception. However, according to Oracle, there are two types of exceptions namely:</p>
+</div>
+<div id="demo6">
+<b>1. Checked Exceptions:</b> Checked exceptions are called compile-time exceptions because these exceptions are checked at compile-time by the compiler.
+</div><br>
+<div id="demo7">
+<b>2. Unchecked Exceptions:</b> The unchecked exceptions are just opposite to the checked exceptions. The compiler will not check these exceptions at compile time. In simple words, if a program throws an unchecked exception, and even if we didn’t handle or declare it, the program would not give a compilation error.
+</div>
+<div id="demo8">
+  <br>
+<p>The advantages of Exception Handling in Java are as follows: </p>
+<ul>
+<li>Provision to Complete Program Execution</li>
+<li>Easy Identification of Program Code and Error-Handling Code</li>
+<li>Propagation of Errors</li>
+<li>Meaningful Error Reporting</li>
+<li>Identifying Error Types</li>
+</ul>
+</div>
+<div id="demo9">
+<p>Java provides five keywords that are used to handle the exception. The following table describes each.</p>
+
+
+<table class="px-3" id="t1">
+
+    
+        <tr>
+          <th scope="col">Keyword</th>
+          <th scope="col">Description</th>
+        </tr>
+        <tbody>
+            <tr>
+              <th scope="row">try</th>
+              <td>The "try" keyword is used to specify a block where we should place an exception code. It means we can't use try block alone. The try block must be followed by either catch or finally.</td>
+              
+              
+            </tr>
+            <tr>
+              <th scope="row">catch</th>
+              <td>The "catch" block is used to handle the exception. It must be preceded by try block which means we can't use catch block alone. It can be followed by finally block later.</td>
+              
+            
+            </tr>
+            <tr>
+              <th scope="row">finally</th>
+              <td>The "finally" block is used to execute the necessary code of the program. It is executed whether an exception is handled or not.</td>
+              
+            </tr>
+            <tr>
+              <th scope="row">throw</th>
+              <td>The "throw" keyword is used to throw an exception.</td>
+              
+            </tr> 
+            <tr>
+              <th scope="row">throws</th>
+              <td>The "throws" keyword is used to declare exceptions. It specifies that there may occur an exception in the method. It doesn't throw an exception. It is always used with method signature.</td>
+             
+            </tr>
+          </tbody>
+</table>
+</div>
+<form action="PT" method="post">
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end" id="sub1">
+    {% csrf_token %}
+<button class="btn btn-primary my-2" name="sub1" value="exception" id="sub" type="submit">Next</button>
+</div>
+</form>       
+
+
+
+
+                        <!--Col-3-->
+                            <div class="col-2 text-white">
+
+                            </div>
+
+
+
+                    </div>                
+                </div>
+                       
+        <script>
+          let x=0;
+        function events() { 
+            x += 1;
+            switch (x) {
+                case 0:
+                    {
+                    break;
+                    }
+                case 1:
+                    {
+                    document.getElementById("demo1").style.visibility="visible";
+                    document.getElementById("demo1").style.animation="ani 1s 1";
+                    break;
+                    }
+                case 2:
+                    {
+                    document.getElementById("demo2").style.visibility="visible";
+                    document.getElementById("demo2").style.animation="ani 1s 1";
+                    break;
+                    }
+                case 3:
+                    {
+                    document.getElementById("demo3").style.visibility="visible";
+                    document.getElementById("demo3").style.animation="ani 1s 1";
+                    break;
+                    }
+                
+                    case 4:
+                    {
+                      document.getElementById("demo4").style.visibility="visible";
+                    document.getElementById("demo4").style.animation="ani 1s 1";
+                    break;
+                    }
+                    
+                    case 5:
+                    {
+                      document.getElementById("demo5").style.visibility="visible";
+                    document.getElementById("demo5").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 6:
+                    {
+                      document.getElementById("demo6").style.visibility="visible";
+                    document.getElementById("demo6").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 7:
+                    {
+                      document.getElementById("demo7").style.visibility="visible";
+                    document.getElementById("demo7").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 8:
+                    {
+                      document.getElementById("demo8").style.visibility="visible";
+                    document.getElementById("demo8").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 9:
+                    {
+                      document.getElementById("demo9").style.visibility="visible";
+                    document.getElementById("demo9").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 10:
+                    {
+                    document.getElementById("sub1").style.visibility="visible";
+                    document.getElementById("sub1").style.animation="ani 1s 1";
+                    break;
+                    }
+                  }
+                }
+        </script>
+   
+   <script>
+    function scrollToBottom() {
+      var chatHistory = document.getElementById("c1");
+      chatHistory.scrollTop = chatHistory.scrollHeight;
+    }
+  </script>
+
+</body>
+</html>

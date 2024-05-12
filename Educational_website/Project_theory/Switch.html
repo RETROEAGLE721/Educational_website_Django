@@ -1,0 +1,288 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CoWorld</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">    <style>
+       #demo3{
+  visibility : hidden;
+      position: relative;
+      color: white;
+}
+        #hei{
+            height: 2100px; 
+        }  
+      #b1
+        {
+          
+             height: 420px;
+                
+        }
+        #b2
+           {
+             height: 310px;
+           }
+         #b3
+            {
+            
+            height: 620px;
+
+            }
+        #b4
+            {
+            height: 510px;
+
+            }
+            #b5
+            {
+            
+            height: 200px;
+
+            }
+        #b6
+            {
+            height: 90px;
+
+            }
+
+                           
+    </style>
+  </head>
+    <body onclick="events()">
+
+    <!-- //navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" >
+
+      <div class="container-fluid  text-white" id="color">
+      <a class="navbar-brand " href="http://127.0.0.1:8000/Home_page">CoWorld</a>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/Home_page">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/list_of_courses">Explore</a>
+            </li>
+            
+            
+          </ul>
+          <form action="logout_page" method="post">
+            {% csrf_token %}
+            <button class="btn btn-outline-primary text-white" style="margin-right:2rem; width:6rem" name="log_out" type="submit">Log out</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+   
+            
+                        <!--col-1-->
+                        <div class="col-2 " id="c1">
+                          <h4>JAVA</h4>
+                          <li><a href="http://127.0.0.1:8000/Introduction_of_java">Introducation Of Java</a></li>
+                            <li><a href="http://127.0.0.1:8000/Operator">Operators</a></li>
+                            <li> <a href="http://127.0.0.1:8000/Scanner">Scanner</a></li>
+                            <li><a href="http://127.0.0.1:8000/Typecasting">Type Casting</a></li>
+                            <li> <a href="http://127.0.0.1:8000/Ifelse">if else</a></li>
+                            <li><a href="http://127.0.0.1:8000/loop">Loops</a></li>
+                            <li style="color:rgb(119, 188, 252)"> <a href="http://127.0.0.1:8000/Switch" style="color:rgb(119, 188, 252)">Switch</a></li>
+                            <li><a href="http://127.0.0.1:8000/Class_Constructor">Class & Constructor</a></li>
+                            <li><a href="http://127.0.0.1:8000/This_Keyword">This Keyword</a></li>  
+                            <li><a href="http://127.0.0.1:8000/Object">Object</a></li>
+                            <li><a href="http://127.0.0.1:8000/Anonymous_object">Anonymous Object</a></li>
+                            <li><a href="http://127.0.0.1:8000/Method">Method</a></li>
+                            <li><a href="http://127.0.0.1:8000/Access_Modifiers">Access Modifiers</a></li>
+                            <li><a href="http://127.0.0.1:8000/FinalClass1">FinalClass</a></li>
+                            <li><a href="http://127.0.0.1:8000/Final_Variable">Final Variable</a></li>
+                            <li><a href="http://127.0.0.1:8000/Final_method">Final Method</a></li>                        
+                            <li><a href="http://127.0.0.1:8000/Method_overriding">Method Overriding</a></li>
+                            <li><a href="http://127.0.0.1:8000/Inheritance">Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Single_Inheritance">Single Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Muiltilevel_Inheritance">Muiltilevel Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Muiltiple_hybrid_Inheritance">Muiltiple hybrid Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Hierarchical_inheritance">Hierarchical Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/SuperKeyword">Super Keyword</a></li>  
+                            <li><a href="http://127.0.0.1:8000/Abstract_class_and_method">Abstract Class And Method</a></li>
+                            <li><a href="http://127.0.0.1:8000/interface">interface</a></li>
+                            <li><a href="http://127.0.0.1:8000/exception_handling">Exception handling</a></li>
+                            <li><a href="http://127.0.0.1:8000/try_catch_block">Try catch</a></li>
+                            <li><a href="http://127.0.0.1:8000/finally_block">Finally block</a></li>
+                        </div>
+                        <div class="container-fluid" id="hei">
+        <div class="row">                        <!--col-2-->
+                        <div class="col-8 text-white">
+                        <!---->
+                        <h2>Switch</h2>
+                        <p>The switch statement tests the value of given variable (or expression)againstalist of case values and when a match is found, a block of statements associated with that case is executed.The general form of the switch statement is as shown below:</p>
+                    
+                        <div class="card" id="b1">
+                          <h5 class="card-header">Syntax:-</h5>
+                          <div class="card-body">
+                               
+                        <div class="card" id="b2">
+                      
+                          <div class="card-body" >
+<pre>
+    switch(expression)
+    {
+      case value-1:
+      block-1
+      break:
+      case value-2:
+      block-2
+      break;     
+      default-block
+      break:
+    }
+    statement-x;
+</pre>
+                          </div>
+                        </div>
+                          </div>
+                          </div>
+           <br>
+           <div id="demo1">
+<p>The expression is an integer expression or characters.value-1,value-2.... are constants or constant expressions(evaluable to an integral constant)and are known as case labels.Each of these values should be unique within a switch statement. block-1,block-2.... are statement lists and may contain zero or more statements.There is no need to put braces around these blocks but it is important to note that case labels end with a colon(;).</p>
+
+<p>When the switch is executed,the value of the expression is successively compared against the value-1,value-2,....if the case value and expression value are similar then the block of statements that follows the case are executed.</p>
+  </div>
+  <div id="demo2">
+<p>The break statement at the end of each block signals the end of a particular case and causes an exit from the switch statement.</p>
+
+<p>If the value of the expression does not match with any of the case values then the default case block is executed. If not present,no action takes place and the control goes to the statement-x.</p>
+  </div>
+                          
+                        <div class="card" id="b3">
+                          <h5 class="card-header">Example:-</h5>
+                          <div class="card-body">
+                               
+                        <div class="card" id="b4">
+                      
+                          <div class="card-body" >
+<pre>
+    int  a =2;
+    switch(a)
+    {
+      case 1:
+      {
+        System.out.println(“Hello.”);
+        break;
+      }
+      case 2:
+      {
+        System.out.println(“Hi.”);
+        break;
+      }
+      default: 
+      {
+        System.out.println(“Default is called.”);
+        break;
+      }
+    }
+    System.out.println(“There are flowers in the garden.”);
+</pre>
+                          </div>
+                        </div>
+                          </div>
+                          </div>
+        
+    
+                            <div class="card" id="b5">
+                          <h5 class="card-header">Output:</h5>
+                          <div class="card-body">
+                               
+                        <div class="card" id="b6">
+                      
+                          <div class="card-body" >
+<pre>
+    Hi.
+    There are flowers in the garden.
+</pre>
+                          </div>
+                        </div>
+                          </div>
+                          </div>
+
+                          <form action="PT" method="post">
+                            {% csrf_token %}
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end" id="sub1">
+    <button class="btn btn-primary my-2" name="sub1" value="switch_" id="sub" type="submit">Next</button>
+  </div>
+  </form>
+                        <!--Col-3-->
+                            <div class="col-2 text-white">
+
+                            </div>
+
+
+
+                    </div>                
+                </div>
+                       
+                <script>
+                    let x=0;
+        function events() { 
+            x += 1;
+            switch (x) {
+                case 0:
+                    {
+                    break;
+                    }
+                    case 1:
+                      {
+                        document.getElementById("b1").style.visibility="visible";
+                        document.getElementById("b2").style.visibility="visible";
+                        document.getElementById("b1").style.animation="ani 1s 1";
+                        document.getElementById("b2").style.animation="ani 1s 1";
+                        break;
+                      }
+                      case 2:
+                          {
+                          document.getElementById("demo1").style.visibility="visible";
+                          document.getElementById("demo1").style.animation="ani 1s 1";
+                          break;
+                          }
+                      case 3:
+                          {
+                          document.getElementById("demo2").style.visibility="visible";
+                          document.getElementById("demo2").style.animation="ani 1s 1";
+                          break;
+                          }
+                    case 4:
+                    {
+                      document.getElementById("b3").style.visibility="visible";
+                      document.getElementById("b4").style.visibility="visible";
+                    document.getElementById("b3").style.animation="ani 1s 1";
+                    document.getElementById("b4").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 5:
+                    {
+                      document.getElementById("b5").style.visibility="visible";
+                      document.getElementById("b6").style.visibility="visible";
+                    document.getElementById("b5").style.animation="ani 1s 1";
+                    document.getElementById("b6").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 6:
+                    {
+                    document.getElementById("sub1").style.visibility="visible";
+                    document.getElementById("sub1").style.animation="ani 1s 1";
+                    break;
+                    }
+                  }
+                }
+                  </script>
+        
+   
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>

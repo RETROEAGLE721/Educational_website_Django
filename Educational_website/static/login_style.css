@@ -1,0 +1,87 @@
+body{
+    background-color: #000213;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+.card{
+    height: 600px;
+    width: 450px;
+    margin-left: 33rem;
+    background-color: #000213;
+    border-color: #237bfffb;
+}
+#username:focus,#email:focus,#pwd1:focus,#passwor:focus{
+    border-color: rgb(0, 149, 255);
+}
+
+#log{
+    margin-top: 7rem;
+    margin-left: 33rem;
+    margin-bottom: 7px;
+    font-size: 30px;
+}
+
+#username,#email,#pwd1,#passwor{
+    background-color: #000213;
+    color: white;
+    border-color: #0046af;
+}
+
+#or{
+    margin-left: 200px;
+    margin-top: 4px;
+}
+a{
+    color: #5297fffb;
+    text-decoration: none;
+    
+}
+a:hover{
+    color: #5297fffb;
+}
+#social{
+    margin-top: 17px;
+    width: 430px;
+}
+#social button{
+    width: 200px;
+    margin-right: 4px;
+    height: 45px;
+    font-size: 20px;
+}
+#demo{
+    visibility: hidden;
+}
+
+
+.loginBtn {
+box-sizing: border-box;
+position: relative;
+margin: 0.2em;
+padding: 0 15px 0 46px;
+border: none;
+text-align: left;
+line-height: 34px;
+white-space: nowrap;
+border-radius: 0.2em;
+font-size: 16px;
+color: #FFF;
+}
+.loginBtn:before {
+content: "";
+box-sizing: border-box;
+position: absolute;
+left: 0;
+width: 34px;
+height: 80%;
+}
+
+.loginBtn--facebook {
+background-color: #4C69BA;
+text-shadow: 0 -1px 0 #354C8C;
+}
+
+.loginBtn--google {
+background: #DD4B39;
+}
+

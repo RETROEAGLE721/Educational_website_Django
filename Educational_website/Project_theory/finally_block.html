@@ -1,0 +1,668 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>CoWorld</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">    <style>
+        #hei{
+          height:5600px;
+        }
+
+        #t1{
+          height:120px ;
+          width: 1000px;
+        }
+        
+        #b1
+        {
+
+             height: 370px;
+                
+        }
+        #b2
+           {
+             height: 300px;
+           }
+         #b3
+            {
+
+            height: 600px;
+
+            }
+        #b4
+            {
+            height: 530px;
+
+            }
+
+            #b5
+            {
+
+            height: 170px;
+
+            }
+        #b6
+            {
+            height: 100px;
+
+            }
+
+            #b7
+            {
+
+            height: 600px;
+
+            }
+        #b8
+            {
+  
+            height: 510px;
+
+            }
+
+            #b9
+            {
+           
+            height: 230px;
+
+            }
+        #b10
+            {
+          
+            height:160px;
+
+            }
+
+            #b11
+            {
+ 
+            height: 580px;
+
+            }
+        #b12
+            {
+         
+            height:500px;
+
+            }
+
+        #b13
+            {
+        
+            height: 230px;
+
+            }
+        #b14
+            {
+     
+            height:150px;
+
+            }
+
+            #b15
+            {
+    
+            height: 500px;
+
+            }
+        #b16
+            {
+      
+            height:430px;
+
+            }
+
+            #b17
+            {
+   
+            height: 330px;
+
+            }
+        #b18
+            {
+         
+            height:50px;
+
+            }
+
+
+       
+
+
+                           
+    </style>
+  </head>
+  <body onclick="events()" onload="scrollToBottom()">
+
+    <!-- //navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" >
+
+      <div class="container-fluid  text-white" id="color">
+      <a class="navbar-brand " href="http://127.0.0.1:8000/Home_page">CoWorld</a>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/Home_page">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="http://127.0.0.1:8000/list_of_courses">Explore</a>
+            </li>
+            
+            
+          </ul>
+          <form action="logout_page" method="post">
+            {% csrf_token %}
+            <button class="btn btn-outline-primary text-white" style="margin-right:2rem; width:6rem" name="log_out" type="submit">Log out</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+            
+                        <!--col-1-->
+                        <div class="col-2 " id="c1">
+                          <h4>JAVA</h4>
+                          <li><a href="http://127.0.0.1:8000/Introduction_of_java">Introducation Of Java</a></li>
+                            <li><a href="http://127.0.0.1:8000/Operator">Operators</a></li>
+                            <li> <a href="http://127.0.0.1:8000/Scanner">Scanner</a></li>
+                            <li><a href="http://127.0.0.1:8000/Typecasting">Type Casting</a></li>
+                            <li> <a href="http://127.0.0.1:8000/Ifelse">if else</a></li>
+                            <li><a href="http://127.0.0.1:8000/loop">Loops</a></li>
+                            <li> <a href="http://127.0.0.1:8000/Switch">Switch</a></li>
+                            <li><a href="http://127.0.0.1:8000/Class_Constructor">Class & Constructor</a></li>
+                            <li><a href="http://127.0.0.1:8000/This_Keyword">This Keyword</a></li>  
+                            <li><a href="http://127.0.0.1:8000/Object">Object</a></li>
+                            <li><a href="http://127.0.0.1:8000/Anonymous_object">Anonymous Object</a></li>
+                            <li><a href="http://127.0.0.1:8000/Method">Method</a></li>
+                            <li><a href="http://127.0.0.1:8000/Access_Modifiers">Access Modifiers</a></li>
+                            <li><a href="http://127.0.0.1:8000/FinalClass1">FinalClass</a></li>
+                            <li><a href="http://127.0.0.1:8000/Final_Variable">Final Variable</a></li>
+                            <li><a href="http://127.0.0.1:8000/Final_method">Final Method</a></li>                        
+                            <li><a href="http://127.0.0.1:8000/Method_overriding">Method Overriding</a></li>
+                            <li><a href="http://127.0.0.1:8000/Inheritance">Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Single_Inheritance">Single Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Muiltilevel_Inheritance">Muiltilevel Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Muiltiple_hybrid_Inheritance">Muiltiple hybrid Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/Hierarchical_inheritance">Hierarchical Inheritance</a></li>
+                            <li><a href="http://127.0.0.1:8000/SuperKeyword">Super Keyword</a></li>  
+                            <li><a href="http://127.0.0.1:8000/Abstract_class_and_method">Abstract Class And Method</a></li>
+                            <li><a href="http://127.0.0.1:8000/interface">interface</a></li>
+                            <li><a href="http://127.0.0.1:8000/exception_handling">Exception handling</a></li>
+                            <li><a href="http://127.0.0.1:8000/try_catch_block">Try catch</a></li>
+                            <li style="color:rgb(119, 188, 252)"><a href="http://127.0.0.1:8000/finally_block" style="color:rgb(119, 188, 252)">Finally block</a></li>
+                        </div>
+                              
+   <div class="container-fluid" id="hei">
+        <div class="row">
+                        <!--col-2-->
+                        <div class="col-8 text-white">
+                        <!---->
+                        
+                        <h2>Finally keyword:</h2>
+
+                        <p>Java finally block is a block used to execute important code such as closing the connection, etc.</p>
+                      
+                          <div id="demo1">
+                        <p>Java finally block is always executed whether an exception is handled or not. Therefore, it contains all the necessary statements that need to be printed regardless of the exception occurs or not.</p>
+
+
+                        <p>The finally block follows the try-catch block.</p>
+                        </div>
+                        <div id="demo2">
+                        <p>The finally block is always executed no matter whether there is an exception or not.</p>
+
+                        <p>The finally keyword is used to execute code (used with exceptions - try..catch statements) no matter if there is an exception or not.</p>
+                        <p>The finally block is optional. And, for each try block, there can be only one finally block.</p>
+                      </div>
+                        <div id="demo3">
+
+                        <br>
+                        <p><i><b>Note:</b> The finally block is a key tool for preventing resource leaks. When closing a file or otherwise recovering resources, place the code in a finally block to ensure that resource is always recovered.</i></p>
+                        <p>The basic syntax of finally block is:</p>
+                      </div>
+                        <div class="card" id="b1">
+                          <h5 class="card-header">Syntax:-</h5>
+                          <div class="card-body">
+                               
+                        <div class="card" id="b2">
+                          <div class="card-body" >
+                    <pre>
+  try {
+    //code
+  }
+  catch (ExceptionType1 e1) { 
+    // catch block
+  }
+  finally {
+    // finally block always executes
+  }
+                      
+                    </pre>
+                        </div>
+                           </div>
+                          </div>
+                           </div> 
+                           <br>
+
+            <div id="demo4">
+          <p>There are various cases when finally can be used. There are discussed below:</p>
+          </div>
+          <div id="demo5">
+          <b>Case 1: Exceptions do not occur in the program</b> 
+          </div>
+          <div class="card" id="b3">
+            <h5 class="card-header">Example:-</h5>
+            <div class="card-body">
+                 
+          <div class="card" id="b4">
+            <div class="card-body" >
+              
+  <pre>
+  class B {
+      public static void main(String[] args)
+      {
+          int k = 55;
+          try {
+              System.out.println("In try block");
+              int z = k / 55;
+          }
+   
+          catch (ArithmeticException e) {
+              System.out.println("In catch block");
+              System.out.println("Dividing by zero but caught");
+          }
+   
+          finally
+          {
+              System.out.println("Executes whether exception occurs or not");
+          }
+      }
+  }
+  </pre>
+
+</div>
+</div>
+</div>
+
+
+
+<div class="card" id="b5">
+  <h5 class="card-header">Output:</h5>
+  <div class="card-body">
+       
+<div class="card" id="b6">
+  <div class="card-body" >
+<pre>
+  In try block  
+  Executes whether exception occurs or not
+</pre>
+<br><br>
+</div>
+</div>
+</div>
+<br>
+<div id="demo6">
+<p>Here the above exception does not occur but still, finally, the block executes since finally is meant to execute whether an exception occurs or not. The flow of the Above Program: First it starts from the main method and then goes to try block and in the try, since no exception occurs, the flow doesn’t go to catch block hence flow goes directly from try to finally block.</p>
+</div>
+<br>
+<div id="demo7">
+<p><b>Case 2: Exception occurs and corresponding catch block matches:</b></p>
+</div>
+<div class="card" id="b7">
+  <h5 class="card-header">Example:</h5>
+  <div class="card-body">
+       
+<div class="card" id="b8">
+  <div class="card-body" >
+    <pre>
+      class C {
+      public static void main(String[] args)
+      {
+          int k = 66;
+          try {
+              System.out.println("In try block");
+              int  z = k / 0;                        
+           System.out.println("Flow doesn't came here");
+          }
+          catch (ArithmeticException e) {
+              System.out.println("In catch block");
+              System.out.println("Dividing by zero but caught");
+          }
+   
+          finally
+          {
+              System.out.println("Executes whether an exception occurs or not");
+          }
+      }
+  }
+  
+</pre>
+</div>
+</div>
+</div>
+<br>
+
+<div class="card" id="b9">
+  <h5 class="card-header">Output:</h5>
+  <div class="card-body">
+       
+<div class="card" id="b10">
+  <div class="card-body" >
+
+
+<pre>
+    In try block
+    In catch block                         
+    Dividing by zero but caught 
+    Executes whether an exception occurs or not
+</pre>
+</div>
+</div>
+</div>
+</div>
+<br>
+          <div id="demo8">
+<p>Here, the above exception occurs, and the corresponding catch block is found but still, finally, the block executes since finally is meant to execute whether an exception occurs or not or whether the corresponding catch block is found or not. The flow of the Above Program: First, starts from the main method and then goes to try block, and in the try, an Arithmetic exception occurs, and the corresponding catch block is also available, so flow goes to catch block.After that finally, execute since finally is meant to execute whether an exception occurs or not or whether a corresponding catch block is found or not.</p>
+</div>
+<div id="demo9">
+<br>
+<p><b>Case 3: Exception occurs and the corresponding catch block is not found/match:</b></p>
+</div>
+
+
+<div class="card" id="b11">
+  <h5 class="card-header">Example:</h5>
+  <div class="card-body">
+       
+<div class="card" id="b12">
+  <div class="card-body" >
+<pre>
+    class D {
+      public static void main(String[] args)
+      {
+          int k = 15;
+          try {
+              System.out.println("In try block");
+              int z = k / 0;
+          }
+   
+          catch (NullPointerException e) {
+              System.out.println("In catch block");
+              System.out.println("Dividing by zero but caught");
+          }
+   
+          finally
+          {
+              System.out.println("Executes whether an exception occurs or not");
+          }
+      }
+  }
+</pre>
+</div>
+</div>
+</div>
+
+
+
+<div class="card" id="b13">
+  <h5 class="card-header">Output:</h5>
+  <div class="card-body">
+       
+<div class="card" id="b14">
+  <div class="card-body" >
+<pre>
+In try block  
+Executes whether an exception occurs or not
+Exception in thread "main":java.lang.ArithmeticException:
+/ by zero followed by stack trace.
+</pre>
+</div>
+</div>
+</div>
+<br>
+<br>
+
+<p>Here above exception occurs and the corresponding catch block is not found/matched but still finally block executes since finally is meant to execute whether an exception occurs or not or whether the corresponding catch block is found/matched or not. The flow of the Above Program: First starts from the main method and then goes to try block and in try an Arithmetic exception occurs, and the corresponding catch block is not available, so flow doesn’t go to catch block. After that flow doesn’t go to try block again since once an exception occurs in try block then flow doesn’t come back again to try block. After that finally, execute since finally is meant to execute whether an exception occurs or not or whether the corresponding catch block is found/matches or not.</p>
+<br>
+<p><b>Case 4: finally block doesn’t get execute irrespective of the exception that occurs:</b></p>
+
+
+<div class="card" id="b15">
+  <h5 class="card-header">Example:</h5>
+  <div class="card-body">
+       
+<div class="card" id="b16">
+  <div class="card-body" >
+    <pre>
+    // Java program to illustrate finally in
+ 
+// case where finally doesnt get executed
+class E{
+  public static void main(String[] args){
+    try{
+      System.out.println("In try block");
+      System.exit(0);
+    }
+    catch(ArithmeticException e){
+      System.out.println("In catch block");
+    }
+    finally{
+      System.out.println("finally block");
+    }
+  }
+}
+</pre>  
+
+</div>
+</div>
+</div>
+
+
+<div class="card" id="b17">
+  <h5 class="card-header">Example:</h5>
+  <div class="card-body">
+       
+<div class="card" id="b18">
+  <div class="card-body" >
+<pre>
+  In try block
+</pre>
+
+</div>
+</div>
+</div>
+</div>
+<div id="demo10">
+<br>
+<p>Here in the above program, finally, the block doesn’t execute. There is only one situation where finally block won’t be executed when we are using System.exit(0) method. When we are using System.exit(0) then JVM itself shutdown, hence in this case finally block won’t be executed.</p>
+
+<br>
+</div>
+<form action="PT" method="post">
+  {% csrf_token %}
+  <div class="d-grid gap-2 d-md-flex justify-content-md-end" id="sub1">
+<button class="btn btn-primary my-2" name="sub1" value="finally" id="sub" type="submit">Next</button>
+</div>
+</form>       
+
+                    </div>
+
+
+                    
+                        <!--Col-3-->
+                            <div class="col-2 text-white">
+                              
+                            </div>
+
+                            
+
+                    </div>     
+                       
+                </div>
+                
+        
+   <script>
+    let x=0;
+        function events() { 
+            x += 1;
+            switch (x) {
+                case 0:
+                    {
+                    break;
+                    }
+                case 1:
+                    {
+                    document.getElementById("demo1").style.visibility="visible";
+                    document.getElementById("demo1").style.animation="ani 1s 1";
+                    break;
+                    }
+                case 2:
+                    {
+                    document.getElementById("demo2").style.visibility="visible";
+                    document.getElementById("demo2").style.animation="ani 1s 1";
+                    break;
+                    }
+                case 3:
+                    {
+                    document.getElementById("demo3").style.visibility="visible";
+                    document.getElementById("demo3").style.animation="ani 1s 1";
+                    break;
+                    }
+                case 4:
+                    {
+                    document.getElementById("b1").style.visibility="visible";
+                    document.getElementById("b2").style.visibility="visible";
+                    document.getElementById("b1").style.animation="ani 1s 1";
+                    document.getElementById("b2").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 5:
+                    {
+                      document.getElementById("demo4").style.visibility="visible";
+                    document.getElementById("demo4").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 6:
+                    {
+                      document.getElementById("demo5").style.visibility="visible";
+                    document.getElementById("demo5").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 7:
+                    {
+                      document.getElementById("b3").style.visibility="visible";
+                      document.getElementById("b4").style.visibility="visible";
+                    document.getElementById("b3").style.animation="ani 1s 1";
+                    document.getElementById("b4").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 8:
+                    {
+                      document.getElementById("b5").style.visibility="visible";
+                      document.getElementById("b6").style.visibility="visible";
+                    document.getElementById("b5").style.animation="ani 1s 1";
+                    document.getElementById("b6").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 9:
+                    {
+                      document.getElementById("demo6").style.visibility="visible";
+                    document.getElementById("demo6").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 10:
+                    {
+                      document.getElementById("demo7").style.visibility="visible";
+                    document.getElementById("demo7").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 11:
+                    {
+                      document.getElementById("b7").style.visibility="visible";
+                      document.getElementById("b8").style.visibility="visible";
+                    document.getElementById("b7").style.animation="ani 1s 1";
+                    document.getElementById("b8").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 12:
+                    {
+                      document.getElementById("b9").style.visibility="visible";
+                      document.getElementById("b10").style.visibility="visible";
+                    document.getElementById("b9").style.animation="ani 1s 1";
+                    document.getElementById("b10").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 13:
+                    {
+                      document.getElementById("demo8").style.visibility="visible";
+                    document.getElementById("demo8").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 14:
+                    {
+                      document.getElementById("demo9").style.visibility="visible";
+                    document.getElementById("demo9").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 15:
+                    {
+                      document.getElementById("b11").style.visibility="visible";
+                      document.getElementById("b12").style.visibility="visible";
+                    document.getElementById("b11").style.animation="ani 1s 1";
+                    document.getElementById("b12").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 16:
+                    {
+                      document.getElementById("b13").style.visibility="visible";
+                      document.getElementById("b14").style.visibility="visible";
+                    document.getElementById("b13").style.animation="ani 1s 1";
+                    document.getElementById("b14").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 17:
+                    {
+                      document.getElementById("b15").style.visibility="visible";
+                      document.getElementById("b16").style.visibility="visible";
+                    document.getElementById("b15").style.animation="ani 1s 1";
+                    document.getElementById("b16").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 18:
+                    {
+                      document.getElementById("b17").style.visibility="visible";
+                      document.getElementById("b18").style.visibility="visible";
+                    document.getElementById("b17").style.animation="ani 1s 1";
+                    document.getElementById("b18").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 19:
+                    {
+                      document.getElementById("demo10").style.visibility="visible";
+                    document.getElementById("demo10").style.animation="ani 1s 1";
+                    break;
+                    }
+                    case 20:
+                    {
+                    document.getElementById("sub1").style.visibility="visible";
+                    document.getElementById("sub1").style.animation="ani 1s 1";
+                    break;
+                    }
+                  }
+                }
+   </script>
+ <script>
+  function scrollToBottom() {
+    var chatHistory = document.getElementById("c1");
+    chatHistory.scrollTop = chatHistory.scrollHeight;
+  }
+</script>
+
+</body>
+</html>
